@@ -1,4 +1,36 @@
+.container{
+    display: flex;
+    justify-content: center;
+}
+
 .main-container{
     background-color: var(--beige);
     display: grid;
+    grid-template-columns: 1fr 2fr 2fr 2fr 1fr ;
+    grid-template-rows: 1fr 1fr 1fr 1fr 50px;
+    width: 800px;
+    border-radius: 50px;
+    background-color: rgba(var(--light-beige-rgb), .9);
+}
+
+.item-a{
+    grid-column: 3/6;
+    grid-row: 1/6;
+}
+
+.item-b{
+    grid-column: 1/6;
+    grid-row: 2/5;
+}
+
+.item-c{
+    display: inline;
+    background-color: rgba(var(--beige-rgb), .9);
+    font-size: 1.6rem;
+    text-align: center;
+    vertical-align: middle;
+    color: var(--light-orange);
+    grid-column: 1/6;
+    grid-row: 6;
+    border-radius: 0px 0px 50px 50px;
 }
