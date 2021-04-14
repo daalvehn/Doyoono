@@ -1,13 +1,12 @@
 .game-container {
     display: flex;
     flex-direction: column;
-    background-color: #ffe9d0;
+    background-color: var(--beige);
     opacity: 90%;
-    border-radius: 20px;
+    border-radius: 2rem;
     max-width: 950px;
-    max-height: 530px;
     font-size: 2.3rem;
-    padding: 80px;
+    padding: 8rem 8rem 6rem 8rem;
 }
 
 .answers-container {

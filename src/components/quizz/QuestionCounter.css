@@ -1,6 +1,6 @@
 .question-counter {
-    background-color: #71ccff;
-    color: white;
+    background-color: var(--blue);
+    color: var(--white);
     text-align: center;
     width: 7rem;
     font-size: 1.5rem;

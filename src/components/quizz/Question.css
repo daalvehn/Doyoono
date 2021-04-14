@@ -1,7 +1,7 @@
 .question-container {
-    background-color: white;
-    border-radius: 5px;
-    padding: 20px 30px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem 3rem;
     text-align: center;
     align-content: space-around;
 }
