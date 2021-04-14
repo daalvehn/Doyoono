@@ -1,0 +1,8 @@
+.answer-container {
+    background-color: white;
+    text-align: center;
+    border-radius: 5px;
+    padding: 0px 30px;
+    margin-top: 20px;
+    min-width: 40%;
+}
