@@ -1,0 +1,17 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--beige);
+    opacity: 90%;
+    border-radius: 2rem;
+    max-width: 950px;
+    font-size: 2.3rem;
+    padding: 8rem 8rem 6rem 8rem;
+}
+
+.answers-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+}
