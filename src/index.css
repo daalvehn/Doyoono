@@ -1,4 +1,10 @@
+body{
+    margin: 0
+}
+
 html {
+    background-image: url("./assets/images/background.png");
+    background-size: cover;
     font-family: 'Montserrat', sans-serif;
     --blue: #71ccff;
     --purple: #8600c2;
@@ -11,3 +17,4 @@ html {
     color: var(--dark-grey);
     font-size: 62.5%;
 }
+
