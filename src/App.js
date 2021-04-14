@@ -1,11 +1,11 @@
 import './App.css'
-import GameContainer from './components/quizz/GameContainer'
+import DifficultyInput from './components/homepage/DifficultyInput/DifficultyInput'
 
 function App() {
 
     return (
         <div className="App">
-            <GameContainer />
+            <DifficultyInput />
         </div>
     )
 
