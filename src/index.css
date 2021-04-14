@@ -1,8 +1,20 @@
-html{
-    background-image: url("./assets/images/background.png");
-    background-size: cover;
-}
-
 body{
     margin: 0
 }
+
+html {
+    background-image: url("./assets/images/background.png");
+    background-size: cover;
+    font-family: 'Montserrat', sans-serif;
+    --blue: #71ccff;
+    --purple: #8600c2;
+    --orange: #ff7e46;
+    --dark-grey: #404040;
+    --light-beige: #fff6f2;
+    --beige: #ffe9d0;
+    --light-orange: #ffa979;
+    --white: #fff;
+    color: var(--dark-grey);
+    font-size: 62.5%;
+}
+
