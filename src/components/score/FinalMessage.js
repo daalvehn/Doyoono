@@ -1,10 +1,10 @@
 import React from 'react';
 import './FinalMessage.css'
 
-const FinalMessage = ({username}) => {
+const FinalMessage = () => {
     return (
         <div className="final-message"> 
-        Congratulations {username} !
+        Congratulations Username !
         </div>
     )
 }
