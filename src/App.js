@@ -1,14 +1,12 @@
 import './App.css'
-import GameContainer from './components/quizz/GameContainer'
+import NumberOfQuestionsInput from './components/homepage/NumberOfQuestionsInput'
 
 function App() {
-
     return (
         <div className="App">
-            <GameContainer />
+            <NumberOfQuestionsInput />
         </div>
     )
-
 }
 
 export default App
