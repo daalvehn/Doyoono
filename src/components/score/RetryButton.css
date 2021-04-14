@@ -1,0 +1,18 @@
+.div-button {
+    display: flex;
+    width: 100rem;
+    height: 86rem;
+    justify-content: center;
+
+}
+
+button {
+    text-align: center;
+    color: white;
+    background-color: #ff7346;
+    font-weight: bold;
+    font-size: 3rem;
+    height: 6rem;
+    width: 20rem;
+
+}
