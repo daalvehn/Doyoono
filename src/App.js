@@ -9,6 +9,7 @@ import FinalMessage from './components/score/FinalMessage'
 import FinalScore from './components/score/FinalScore'
 import RetryButton from './components/score/RetryButton'
 import { useState } from 'react'
+import MainContainer from './components/MainContainer'
 
 function App() {
     const [userName, setUserName] = useState('')
@@ -24,6 +25,7 @@ function App() {
             <FinalMessage userName={userName} />
             <FinalScore />
             <RetryButton />
+            <MainContainer />
         </div>
     )
 }
