@@ -4,7 +4,7 @@ import './FinalMessage.css'
 const FinalMessage = () => {
     return (
         <div className="final-message"> 
-        Congratulations Username !
+        <p>Congratulations Username !</p>
         </div>
     )
 }

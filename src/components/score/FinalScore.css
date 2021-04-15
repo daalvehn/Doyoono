@@ -7,11 +7,13 @@
     font-style: bold;
     text-align: center;
     vertical-align: center;
+    
    
 }
 .score-number {
     font-size: 6rem;
     text-align: center;
     vertical-align: center;
+    margin: 0;
   
 }
