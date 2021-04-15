@@ -11,7 +11,9 @@ html {
     --orange: #ff7e46;
     --dark-grey: #404040;
     --light-beige: #fff6f2;
+    --light-beige-rgb:  255, 246, 242;
     --beige: #ffe9d0;
+    --beige-rgb: 255, 233, 208;
     --light-orange: #ffa979;
     --white: #fff;
     color: var(--dark-grey);
