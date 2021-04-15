@@ -1,0 +1,21 @@
+.score-field {
+ display: inline-block;
+ width: 24rem;
+ height: 9.9rem;
+ color:#8600C2;
+ font-size: 1.7rem;
+ font-weight: bold;
+ text-align: center;
+}
+
+
+.score-quizz {
+    width: 15.8rem;
+    height: 4.7rem;
+    background-color: #8600C2;
+    color: white;
+    display: inline-block;
+    margin: 1rem;
+    font-size: 3rem;
+    border-radius: 10%;
+}
