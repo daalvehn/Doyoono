@@ -4,7 +4,7 @@ import './RetryButton.css';
 const RetryButton = () => {
     return (
         <div className="div-button">
-            <button className="button">Retry</button> 
+            <a className="button">Retry</a> 
         </div>
     )
 }
