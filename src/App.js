@@ -1,10 +1,10 @@
 import './App.css'
-import RetryButton from './components/score/RetryButton'
+import ScoreField from './components/quizz/ScoreField'
 
 function App() {
     return (
         <div className="App">
-            <RetryButton />
+            <ScoreField />
         </div>
     )
 }
