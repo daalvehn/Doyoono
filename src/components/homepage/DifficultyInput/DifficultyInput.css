@@ -49,11 +49,15 @@
 
 .difficulty-input input:hover,
 .difficulty-input input:active {
+    
     background-color: #eef;
+    outline: none;
 }
 
 .difficulty-input input:checked {
+    
     border: 10px solid white;
     background-color: var(--blue);
     cursor: pointer;
+    outline: none;
 }
