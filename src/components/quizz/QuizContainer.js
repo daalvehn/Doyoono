@@ -5,7 +5,7 @@ import NameField from './NameField'
 import './QuizContainer.css'
 
 const QuizContainer = ({ userName }) => (
-    <div>
+    <div className="quiz-container">
         <div className="quiz-header">
             <NameField userName={userName} />
             <ScoreField />
