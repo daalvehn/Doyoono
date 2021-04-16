@@ -1,9 +1,13 @@
 .score-field {
-    display: block;
     color: var(--purple);
     font-size: 1.7rem;
     font-weight: bold;
     text-align: center;
+    margin: 0;
+}
+
+.score-field p {
+    margin: 0;
 }
 
 .score-quizz {
@@ -12,12 +16,8 @@
     width: 15rem;
     background-color: var(--purple);
     color: var(--white);
-    display: inline-block;
     font-size: 2.6rem;
     border-radius: 5px;
-}
-
-.score-quizz p {
+    padding: 10px 0;
     margin: 0;
-    padding: 5px;
 }
