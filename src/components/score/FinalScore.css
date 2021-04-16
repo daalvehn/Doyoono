@@ -1,15 +1,19 @@
 .final-score {
     display: inline-block;
-    color: #8600C2;
-    width: 7.3rem;
-    height: 1.42rem;
+    color: var(--purple);
 }
 .score {
     font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    
    
 }
 .score-number {
     font-size: 6rem;
     text-align: center;
+    vertical-align: center;
+    margin: 0;
   
 }

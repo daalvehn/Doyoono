@@ -5,7 +5,7 @@ const FinalScore = () => {
     return (
         <div className="final-score">
             <p className="score">Here's your score</p>
-            <div className="score-number">12 679 </div>
+            <p className="score-number">12 679 </p>
 
         </div>
     )
