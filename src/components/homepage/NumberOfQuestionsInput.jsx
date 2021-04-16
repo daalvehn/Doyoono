@@ -7,10 +7,10 @@ const NumberOfQuestionsInput = () => {
                 <p>10</p>
             </div>
             <div className="increase-btn">
-                <a href=""></a>
+                <a ></a>
             </div>
             <div className="decrease-btn">
-                <a href=""></a>
+                <a ></a>
             </div>
         </div>
     )
