@@ -3,10 +3,10 @@ import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
 
-const ScoreContainer = () => {
+const ScoreContainer = ({ userName }) => {
     return (
         <div>
-            <FinalMessage />
+            <FinalMessage userName={userName} />
             <FinalScore />
             <RetryButton />
         </div>

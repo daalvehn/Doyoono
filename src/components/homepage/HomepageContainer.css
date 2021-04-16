@@ -1,4 +1,16 @@
 .quiz-properties {
     display: flex;
     justify-content: space-around;
+    align-items: flex-start;
+}
+
+.go-btn {
+    display: flex;
+    justify-content: center;
+}
+
+.homepage-form label {
+    font-size: 2rem;
+    font-family: 'Montserrat';
+    margin: 0;
 }

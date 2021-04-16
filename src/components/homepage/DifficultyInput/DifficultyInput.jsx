@@ -3,16 +3,16 @@ import './DifficultyInput.css'
 import RadioInput from './RadioInput'
 
 const difficulty = {
-        easy: 'easy',
-        medium: 'medium',
-        hard: 'hard'
-    }
+    easy: 'easy',
+    medium: 'medium',
+    hard: 'hard',
+}
 
-    const radioInputName = 'difficulty'
+const radioInputName = 'difficulty'
 
 const DifficultyInput = () => (
     <div className="difficulty-input">
-        <h3>Difficulty</h3>
+        <label>Difficulty</label>
         <fieldset>
             <RadioInput name={radioInputName} difficulty={difficulty.easy} />
             <RadioInput name={radioInputName} difficulty={difficulty.medium} />
