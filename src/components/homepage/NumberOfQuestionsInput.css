@@ -1,19 +1,45 @@
-.form-control label {
-    font-family: Montserrat;
-    font-style: normal;
-    font-weight: normal;
-    font-size: 20px;
-    line-height: 24px;
-    text-align: center;
-    color: #404040;
-}
-.form-input {
+.nbr-qstn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 220px;
     height: 43px;
-    width: 221px;
-    font-size: 20px;
+    background-color: var(--white);
     border-radius: 5px;
-    background: #ffffff;
-    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-    border-radius: 5px;
-    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 4px 2px -2px gray;
+}
+
+.nbr {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 60px;
+    width: 50px;
+    background-color: var(--white);
+    font-size: 35px;
+}
+
+.increase-btn > a {
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-bottom: 11px solid var(--blue);
+
+    position: absolute;
+    top: 6px;
+    right: 11px;
+}
+
+.decrease-btn > a {
+    width: 0;
+    height: 0;
+    border-left: 11px solid transparent;
+    border-right: 11px solid transparent;
+    border-top: 11px solid var(--blue);
+    position: absolute;
+    bottom: 6px;
+    right: 11px;
 }
