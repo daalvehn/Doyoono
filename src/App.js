@@ -1,10 +1,10 @@
 import './App.css'
-import MainContainer from './components/MainContainer'
+import NumberOfQuestionsInput from './components/homepage/NumberOfQuestionsInput'
 
 function App() {
     return (
         <div className="App">
-            <MainContainer />
+            <NumberOfQuestionsInput />
         </div>
     )
 }
