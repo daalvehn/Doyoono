@@ -1,10 +1,10 @@
 import './App.css'
-import MainContainer from './components/MainContainer'
+import ScoreContainer from './components/score/ScoreContainer'
 
 function App() {
     return (
         <div className="App">
-            <MainContainer />
+            <ScoreContainer />
         </div>
     )
 }

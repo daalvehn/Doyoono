@@ -1,5 +1,4 @@
 .final-score {
-    display: inline-block;
     color: var(--purple);
 }
 .score {
@@ -7,6 +6,7 @@
     font-weight: bold;
     text-align: center;
     vertical-align: center;
+    margin: 0;
     
    
 }

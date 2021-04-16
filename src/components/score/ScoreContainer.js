@@ -2,14 +2,15 @@ import React from 'react'
 import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
+import './ScoreContainer.css'
 
-const ScoreContainer = ({ userName }) => {
+const ScoreContainer = ({username }) => {
     return (
-        <div>
-            <FinalMessage userName={userName} />
-            <FinalScore />
-            <RetryButton />
-        </div>
+        <div className="score-page">
+                <FinalMessage userName={username} />
+                <FinalScore />
+                 <RetryButton />
+                 </div>
     )
 }
 
