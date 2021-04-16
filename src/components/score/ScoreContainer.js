@@ -4,13 +4,13 @@ import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
 import './ScoreContainer.css'
 
-const ScoreContainer = ({username }) => {
+const ScoreContainer = ({ userName }) => {
     return (
         <div className="score-page">
-                <FinalMessage userName={username} />
-                <FinalScore />
-                 <RetryButton />
-                 </div>
+            <FinalMessage userName={userName} />
+            <FinalScore />
+            <RetryButton />
+        </div>
     )
 }
 
