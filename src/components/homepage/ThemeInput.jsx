@@ -3,7 +3,7 @@ import './ThemeInput.css'
 const ThemeInput = () => {
     return (
         <div className="form-control">
-            <label for="category">Theme</label>
+            <div className="label" for="category">Theme</div>
             <select name="category" id="category">
                 <option selected="selected" value="History">
                     History
