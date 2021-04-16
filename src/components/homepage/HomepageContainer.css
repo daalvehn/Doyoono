@@ -1,0 +1,4 @@
+.quiz-properties {
+    display: flex;
+    justify-content: space-around;
+}
