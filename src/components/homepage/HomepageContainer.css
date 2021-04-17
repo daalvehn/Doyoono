@@ -1,16 +1,25 @@
 .quiz-properties {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: flex-start;
+}
+
+.quiz-properties .label {
+    font-size: 2rem;
+    margin-bottom: 2rem;
 }
 
 .go-btn {
     display: flex;
     justify-content: center;
+    margin: 4rem 0;
 }
 
-.homepage-form label {
-    font-size: 2rem;
-    font-family: 'Montserrat';
-    margin: 0;
+.radio-button label {
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+}
+
+.name-input {
+    margin-bottom: 4rem;
 }

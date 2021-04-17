@@ -12,12 +12,12 @@ const radioInputName = 'difficulty'
 
 const DifficultyInput = () => (
     <div className="difficulty-input">
-        <label>Difficulty</label>
-        <fieldset>
+        <div className="label">Difficulty</div>
+        <div className="radio-input">
             <RadioInput name={radioInputName} difficulty={difficulty.easy} />
             <RadioInput name={radioInputName} difficulty={difficulty.medium} />
             <RadioInput name={radioInputName} difficulty={difficulty.hard} />
-        </fieldset>
+        </div>
     </div>
 )
 

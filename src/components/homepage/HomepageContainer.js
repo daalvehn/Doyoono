@@ -9,13 +9,15 @@ import './HomepageContainer.css'
 const HomepageContainer = ({ userName, setUserName }) => {
     return (
         <div>
-            <form className="homepage-form">
-                <NameInput userName={userName} setUserName={setUserName} />
-                <span className="quiz-properties">
+            <form>
+                <div className="name-input">
+                    <NameInput userName={userName} setUserName={setUserName} />
+                </div>
+                <div className="quiz-properties">
                     <ThemeInput />
                     <DifficultyInput />
                     <NumberOfQuestionsInput />
-                </span>
+                </div>
                 <div className="go-btn">
                     <GoButton />
                 </div>
