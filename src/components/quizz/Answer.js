@@ -1,10 +1,10 @@
 import React from 'react'
 import './Answer.css'
 
-const Answer = () => {
+const Answer = ({ answer }) => {
     return (
         <div className="answer-container">
-            <p>Lorem, ipsum.</p>
+            <p>{answer}</p>
         </div>
     )
 }
