@@ -4,16 +4,22 @@ import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
 
-const GameContainer = () => {
+const GameContainer = ({
+    question,
+    correct_answer,
+    incorrect_answer0,
+    incorrect_answer1,
+    incorrect_answer2,
+}) => {
     return (
         <div className="game-container">
             <QuestionCounter />
-            <Question />
+            <Question question={question} />
             <div className="answers-container">
-                <Answer />
-                <Answer />
-                <Answer />
-                <Answer />
+                <Answer answer={correct_answer} />
+                <Answer answer={incorrect_answer0} />
+                <Answer answer={incorrect_answer1} />
+                <Answer answer={incorrect_answer2} />
             </div>
         </div>
     )

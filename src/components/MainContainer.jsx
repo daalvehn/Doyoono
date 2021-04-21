@@ -6,8 +6,17 @@ import ScoreContainer from './score/ScoreContainer'
 import QuizContainer from './quizz/QuizContainer'
 import { useState } from 'react'
 
-const MainContainer = () => {
-    const [userName, setUserName] = useState('Michel')
+const MainContainer = ({
+    difficulty,
+    setDifficulty,
+    category,
+    setCategory,
+    amount,
+    setAmount,
+    quiz,
+    setQuiz,
+}) => {
+    const [userName, setUserName] = useState('jacky & Michel')
     return (
         <section className="container">
             <div className="main-container">
@@ -17,9 +26,17 @@ const MainContainer = () => {
                 <HomepageContainer
                     userName={userName}
                     setUserName={setUserName}
+                    difficulty={difficulty}
+                    setDifficulty={setDifficulty}
+                    category={category}
+                    setCategory={setCategory}
+                    amount={amount}
+                    setAmount={setAmount}
+                    quiz={quiz}
+                    setQuiz={setQuiz}
                 />
-                <QuizContainer userName={userName} setUserName={setUserName} />
-                <ScoreContainer userName={userName} setUserName={setUserName} />
+                <QuizContainer userName={userName} quiz={quiz} />
+                <ScoreContainer userName={userName} />
                 <footer>
                     <a>Ressources / Crédits</a>
                 </footer>
