@@ -2,44 +2,34 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 220px;
-    height: 43px;
     background-color: var(--white);
     border-radius: 5px;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 2px -2px gray;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    font-size: 2.5rem;
 }
 
 .nbr {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 60px;
-    width: 50px;
-    background-color: var(--white);
-    font-size: 35px;
+    margin: 0;
+    text-align: center;
+    width: 100%;
 }
 
-.increase-btn > a {
-    width: 0;
-    height: 0;
+.increase-decrease-btn {
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+}
+
+.increase-btn {
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     border-bottom: 11px solid var(--blue);
-
-    position: absolute;
-    top: 6px;
-    right: 11px;
+    margin: 0.3rem;
 }
 
-.decrease-btn > a {
-    width: 0;
-    height: 0;
+.decrease-btn {
     border-left: 11px solid transparent;
     border-right: 11px solid transparent;
     border-top: 11px solid var(--blue);
-    position: absolute;
-    bottom: 6px;
-    right: 11px;
+    margin: 0.3rem;
 }

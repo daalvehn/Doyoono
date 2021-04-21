@@ -1,13 +1,10 @@
 import React from 'react'
 import './Question.css'
 
-const Question = () => {
+const Question = ({ question }) => {
     return (
         <div className="question-container">
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum,
-                explicabo ?
-            </p>
+            <p>{question}</p>
         </div>
     )
 }

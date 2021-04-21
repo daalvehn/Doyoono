@@ -8,23 +8,20 @@
     color: #404040;
 }
 .form h1 {
-    left: 36.88%;
-    right: 35.56%;
-    top: 32.52%;
-    bottom: 63.87%;
+    margin: 5rem 0 3rem;
 }
 
 .user-name {
+    width: 100%;
     font-family: Montserrat;
-    height: 76px;
-    width: 760px;
-    left: 349px;
-    top: 398px;
     border-radius: 10px;
-    font-size: 60px;
+    font-size: 40px;
     text-align: center;
     color: #71ccff;
     caret-color: transparent;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
 }
 ::-webkit-input-placeholder {
     text-align: center;

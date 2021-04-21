@@ -3,16 +3,16 @@ import './NumberOfQuestionsInput.css'
 const NumberOfQuestionsInput = () => {
     return (
         <div>
-            <label for="number-of-question">Number of Questions</label>
+            <div className="label" for="number-of-question">Number of Questions</div>
             <div className="nbr-qstn">
-                <div className="nbr">
-                    <p>10</p>
-                </div>
-                <div className="increase-btn">
-                    <a></a>
-                </div>
-                <div className="decrease-btn">
-                    <a></a>
+                <p className="nbr">10</p>
+                <div className="increase-decrease-btn">
+                    <div className="increase-btn">
+                        <a></a>
+                    </div>
+                    <div className="decrease-btn">
+                        <a></a>
+                    </div>
                 </div>
             </div>
         </div>
