@@ -5,7 +5,6 @@ import './RetryButton.css';
 const RetryButton = () => {
     return (
         <div className="div-button">
-            {/* <a href="">Retry</a> */}
             <Link to="/">Retry</Link>
         </div>
     )

@@ -32,32 +32,32 @@ const MainContainer = ({
                         <Link to="/score">Score</Link>
                     </li>
                 </ul>
-            <div className="main-container">
-                <header>
-                    <img alt="logo" src={logo} />
-                </header>
+                <div className="main-container">
+                    <header>
+                        <img alt="logo" src={logo} />
+                    </header>
                
-           <Switch>
-            <Route exact path="/"><HomepageContainer
-                userName={userName}
-                setUserName={setUserName}
-                difficulty={difficulty}
-                setDifficulty={setDifficulty}
-                category={category}
-                setCategory={setCategory}
-                amount={amount}
-                setAmount={setAmount}
-                quiz={quiz}
-                setQuiz={setQuiz}/>
-            </Route>
-            <Route path="/quiz"> <QuizContainer userName={userName} quiz={quiz}/> </Route>
-            <Route path="/score"> <ScoreContainer userName={userName} /></Route>
-           </Switch>
-                <footer>
-                    <a>Ressources / Crédits</a>
-                </footer>
+                    <Switch>
+                        <Route exact path="/"><HomepageContainer
+                            userName={userName}
+                            setUserName={setUserName}
+                            difficulty={difficulty}
+                            setDifficulty={setDifficulty}
+                            category={category}
+                            setCategory={setCategory}
+                            amount={amount}
+                            setAmount={setAmount}
+                            quiz={quiz}
+                            setQuiz={setQuiz}/>
+                        </Route>
+                        <Route path="/quiz"> <QuizContainer userName={userName} quiz={quiz}/> </Route>
+                        <Route path="/score"> <ScoreContainer userName={userName} /></Route>
+                    </Switch>
+                    <footer>
+                        <a>Ressources / Crédits</a>
+                    </footer>
                 </div>
-        </Router>
+            </Router>
         </section>
     )
 }
