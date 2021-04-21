@@ -21,6 +21,11 @@
     margin-top: 0;
 }
 
+.difficulty-input fieldset{
+    display: flex;
+    border: none;
+}
+
 .difficulty-input input {
     -webkit-appearance: none;
     -moz-appearance: none;
