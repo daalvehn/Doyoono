@@ -4,7 +4,7 @@ import './Answer.css'
 const Answer = ({ answer }) => {
     return (
         <div className="answer-container">
-            <p>{answer}</p>
+            <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
     )
 }

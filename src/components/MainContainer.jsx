@@ -16,7 +16,7 @@ const MainContainer = ({
     quiz,
     setQuiz,
 }) => {
-    const [userName, setUserName] = useState('jacky & Michel')
+    const [userName, setUserName] = useState('Michel')
     return (
         <section className="container">
             <div className="main-container">
