@@ -1,9 +1,9 @@
 import React from 'react'
 import './Answer.css'
 
-const Answer = ({ answer }) => {
+const Answer = ({ answer, nextquestion }) => {
     return (
-        <div className="answer-container">
+        <div className="answer-container" onClick={nextquestion}>
             <p>{answer}</p>
         </div>
     )

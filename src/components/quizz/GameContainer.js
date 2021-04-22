@@ -10,9 +10,12 @@ const GameContainer = ({
     incorrect_answer0,
     incorrect_answer1,
     incorrect_answer2,
+    index,
+    setIndex,
+    quiz,
 }) => {
     const NextQuestion = () => {
-        console.log('hello')
+        index < quiz.length - 1 && setIndex(index + 1)
     }
     ////Randomize le display des réponses
     // let answers = [
@@ -39,10 +42,19 @@ const GameContainer = ({
             <QuestionCounter />
             <Question question={question} />
             <div className="answers-container">
-                <Answer answer={correct_answer} onClick={NextQuestion} />
-                <Answer answer={incorrect_answer0} onClick={NextQuestion} />
-                <Answer answer={incorrect_answer1} onClick={NextQuestion} />
-                <Answer answer={incorrect_answer2} onClick={NextQuestion} />
+                <Answer answer={correct_answer} nextquestion={NextQuestion} />
+                <Answer
+                    answer={incorrect_answer0}
+                    nextquestion={NextQuestion}
+                />
+                <Answer
+                    answer={incorrect_answer1}
+                    nextquestion={NextQuestion}
+                />
+                <Answer
+                    answer={incorrect_answer2}
+                    nextquestion={NextQuestion}
+                />
             </div>
         </div>
     )

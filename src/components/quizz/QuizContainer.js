@@ -15,13 +15,14 @@ const QuizContainer = ({ userName, quiz }) => {
                 <ScoreField />
             </div>
             <GameContainer
-                question={quiz[0].question}
-                correct_answer={quiz[0].correct_answer}
-                incorrect_answer0={quiz[0].incorrect_answers[0]}
-                incorrect_answer1={quiz[0].incorrect_answers[1]}
-                incorrect_answer2={quiz[0].incorrect_answers[2]}
+                question={quiz[index].question}
+                correct_answer={quiz[index].correct_answer}
+                incorrect_answer0={quiz[index].incorrect_answers[0]}
+                incorrect_answer1={quiz[index].incorrect_answers[1]}
+                incorrect_answer2={quiz[index].incorrect_answers[2]}
                 index={index}
                 setIndex={setIndex}
+                quiz={quiz}
             />
         </div>
     )

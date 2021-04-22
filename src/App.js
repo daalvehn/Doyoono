@@ -8,42 +8,34 @@ function App() {
     const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState(9)
     const [difficulty, setDifficulty] = useState('easy')
-    const [isLoading, setIsLoading] = useState(false)
 
     const fetchQuiz = async () => {
-        try {
-            setIsLoading(true)
-            const { data } = await axios.get(
-                `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`
-            )
-            setQuiz(data.results)
-            setIsLoading(false)
-        } catch (error) {
-            console.log('ERROR :', error)
-        }
+        const { data } = await axios.get(
+            `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`
+        )
+        setQuiz(data.results)
     }
 
     useEffect(() => {
         fetchQuiz()
-        console.log(quiz)
     }, [])
-
-    if (isLoading) {
-        return <p>Loading...</p>
-    }
 
     return (
         <div className="App">
-            {/* <MainContainer
-                difficulty={difficulty}
-                setDifficulty={setDifficulty}
-                category={category}
-                setCategory={setCategory}
-                amount={amount}
-                setAmount={setAmount}
-                quiz={quiz}
-                setQuiz={setQuiz}
-            /> */}
+            {quiz.length > 0 ? (
+                <MainContainer
+                    difficulty={difficulty}
+                    setDifficulty={setDifficulty}
+                    category={category}
+                    setCategory={setCategory}
+                    amount={amount}
+                    setAmount={setAmount}
+                    quiz={quiz}
+                    setQuiz={setQuiz}
+                />
+            ) : (
+                'NO DATA'
+            )}
         </div>
     )
 }
