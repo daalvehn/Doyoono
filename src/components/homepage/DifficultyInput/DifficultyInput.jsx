@@ -2,22 +2,18 @@ import React from 'react'
 import './DifficultyInput.css'
 import RadioInput from './RadioInput'
 
-const difficulty = {
-    easy: 'easy',
-    medium: 'medium',
-    hard: 'hard',
-}
+
 
 const radioInputName = 'difficulty'
 
-const DifficultyInput = () => (
+const DifficultyInput = ({difficulty, setDifficulty, difficultyValues}) => (
     <div className="difficulty-input">
-        <div className="label">Difficulty</div>
-        <div className="radio-input">
-            <RadioInput name={radioInputName} difficulty={difficulty.easy} />
-            <RadioInput name={radioInputName} difficulty={difficulty.medium} />
-            <RadioInput name={radioInputName} difficulty={difficulty.hard} />
-        </div>
+        <label>Difficulty</label>
+        <fieldset>
+            <RadioInput name={radioInputName} difficultyValue={difficultyValues.easy} setDifficulty={setDifficulty} difficulty={difficulty} />
+            <RadioInput name={radioInputName} difficultyValue={difficultyValues.medium} setDifficulty={setDifficulty} difficulty={difficulty} />
+            <RadioInput name={radioInputName} difficultyValue={difficultyValues.hard} setDifficulty={setDifficulty} difficulty={difficulty} />
+        </fieldset>
     </div>
 )
 

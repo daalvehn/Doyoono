@@ -1,10 +1,23 @@
 import React from 'react'
 import './DifficultyInput.css'
 
-const RadioInput = (props) => (
+const RadioInput = ({
+    name,
+    difficultyValue,
+    setDifficulty,
+    difficulty,
+}) => (
     <div className="radio-button">
-        <input type="radio" name={props.name} value={props.difficulty} id={props.name + props.difficulty}></input>
-        <label for={props.name + props.difficulty }>{props.difficulty}</label>
+        <input
+            type="radio"
+            name={name}
+            value={difficultyValue}
+            onChange={(e) => setDifficulty(e.target.value)}
+            id={name + difficultyValue}
+            checked={difficulty == difficultyValue}>
+        </input>
+        <label htmlFor={name + difficultyValue}>{difficultyValue}</label>
+
     </div>
 )
 

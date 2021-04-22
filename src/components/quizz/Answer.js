@@ -1,10 +1,10 @@
 import React from 'react'
 import './Answer.css'
 
-const Answer = ({ answer }) => {
+const Answer = ({ answer, nextquestion }) => {
     return (
-        <div className="answer-container">
-            <p>{answer}</p>
+        <div className="answer-container" onClick={nextquestion}>
+            <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
     )
 }
