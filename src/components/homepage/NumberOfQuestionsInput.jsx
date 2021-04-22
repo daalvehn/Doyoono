@@ -3,7 +3,9 @@ import './NumberOfQuestionsInput.css'
 const NumberOfQuestionsInput = () => {
     return (
         <div>
-            <div className="label" for="number-of-question">Number of Questions</div>
+            <div className="label" htmlFor="number-of-question">
+                Number of Questions
+            </div>
             <div className="nbr-qstn">
                 <p className="nbr">10</p>
                 <div className="increase-decrease-btn">
