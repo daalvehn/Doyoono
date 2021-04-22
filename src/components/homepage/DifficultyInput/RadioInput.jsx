@@ -12,10 +12,10 @@ const RadioInput = ({
             type="radio"
             name={name}
             value={difficultyValue}
-            onChange={(e) => setQuestionDifficulty(e.target.value)}
+            onChange={(e) => setDifficulty(e.target.value) }
             id={name + difficultyValue}
-            checked={questionDifficulty == difficultyValue}
-        ></input>
+            checked={difficulty == difficultyValue}>
+        </input>
         <label htmlFor={name + difficultyValue}>{difficultyValue}</label>
     </div>
 )
