@@ -17,6 +17,7 @@ const GameContainer = ({
     const NextQuestion = () => {
         index < quiz.length - 1 && setIndex(index + 1)
     }
+
     //Randomize le display des réponses
     const answers = [
         correct_answer,
