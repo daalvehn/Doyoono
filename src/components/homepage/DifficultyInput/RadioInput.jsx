@@ -4,8 +4,8 @@ import './DifficultyInput.css'
 const RadioInput = ({
     name,
     difficultyValue,
-    setQuestionDifficulty,
-    questionDifficulty,
+    setDifficulty,
+    difficulty,
 }) => (
     <div className="radio-button">
         <input
