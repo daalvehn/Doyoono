@@ -7,9 +7,7 @@ import DifficultyInput from './DifficultyInput/DifficultyInput'
 import './HomepageContainer.css'
 
 
-const HomepageContainer = ({ userName, setUserName }) => {
-
-    const [questionDifficulty, setQuestionDifficulty] = useState(difficultyValues.easy)
+const HomepageContainer = ({ userName, setUserName, difficulty, setDifficulty }) => {
 
     return (
         <div>
@@ -19,7 +17,7 @@ const HomepageContainer = ({ userName, setUserName }) => {
                 </div>
                 <div className="quiz-properties">
                     <ThemeInput />
-                    <DifficultyInput  setQuestionDifficulty={setQuestionDifficulty} questionDifficulty={questionDifficulty} difficultyValues={difficultyValues}/>
+                    <DifficultyInput  setDifficulty={setDifficulty} difficulty={difficulty} difficultyValues={difficultyValues}/>
                     <NumberOfQuestionsInput />
                 </div>
                 <div className="go-btn">
