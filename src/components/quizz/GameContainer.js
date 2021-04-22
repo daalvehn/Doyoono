@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
@@ -13,10 +13,25 @@ const GameContainer = ({
     index,
     setIndex,
     quiz,
+    questionCounter,
+    setQuestionCounter,
 }) => {
+    const [isAnswersReveal, setIsAnswersReveal] = useState(false)
+
+    const checkAnswer = () => {
+        setIsAnswersReveal(true)
+        setTimeout(NextQuestion, 2000)
+    }
+
     const NextQuestion = () => {
         index < quiz.length - 1 && setIndex(index + 1)
+        setIsAnswersReveal(false)
     }
+
+    useEffect(() => {
+        setQuestionCounter(index + 1)
+        setIsAnswersReveal(false)
+    }, [index])
 
     //Randomize le display des réponses
     const answers = [
@@ -34,18 +49,37 @@ const GameContainer = ({
         randomAnswers.unshift(answersToRandom[random])
         answersToRandom.splice(random, 1)
     }
-
     randomAnswers = answersToRandom.concat(randomAnswers)
 
     return (
         <div className="game-container">
-            <QuestionCounter />
+            <QuestionCounter questionCounter={questionCounter} />
             <Question question={question} />
             <div className="answers-container">
-                <Answer answer={randomAnswers[0]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[1]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[2]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[3]} nextquestion={NextQuestion} />
+                <Answer
+                    answer={randomAnswers[0]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
+                <Answer
+                    answer={randomAnswers[1]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
+                <Answer
+                    answer={randomAnswers[2]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
+                <Answer
+                    answer={randomAnswers[3]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
             </div>
         </div>
     )

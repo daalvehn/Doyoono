@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 import logo from '../assets/images/logo.svg'
 import './MainContainer.css'
 import HomepageContainer from './homepage/HomepageContainer'
@@ -16,6 +16,8 @@ const MainContainer = ({
     setAmount,
     quiz,
     setQuiz,
+    questionCounter,
+    setQuestionCounter,
 }) => {
     const [userName, setUserName] = useState('Michel')
     return (
@@ -36,22 +38,33 @@ const MainContainer = ({
                     <header>
                         <img alt="logo" src={logo} />
                     </header>
-               
+
                     <Switch>
-                        <Route exact path="/"><HomepageContainer
-                            userName={userName}
-                            setUserName={setUserName}
-                            difficulty={difficulty}
-                            setDifficulty={setDifficulty}
-                            category={category}
-                            setCategory={setCategory}
-                            amount={amount}
-                            setAmount={setAmount}
-                            quiz={quiz}
-                            setQuiz={setQuiz}/>
+                        <Route exact path="/">
+                            <HomepageContainer
+                                userName={userName}
+                                setUserName={setUserName}
+                                difficulty={difficulty}
+                                setDifficulty={setDifficulty}
+                                category={category}
+                                setCategory={setCategory}
+                                amount={amount}
+                                setAmount={setAmount}
+                                quiz={quiz}
+                                setQuiz={setQuiz}
+                            />
                         </Route>
-                        <Route path="/quiz"> <QuizContainer userName={userName} quiz={quiz}/> </Route>
-                        <Route path="/score"> <ScoreContainer userName={userName} /></Route>
+                        <Route path="/quiz">
+                            <QuizContainer
+                                userName={userName}
+                                quiz={quiz}
+                                questionCounter={questionCounter}
+                                setQuestionCounter={setQuestionCounter}
+                            />
+                        </Route>
+                        <Route path="/score">
+                            <ScoreContainer userName={userName} />
+                        </Route>
                     </Switch>
                     <footer>
                         <a>Ressources / Crédits</a>

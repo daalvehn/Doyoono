@@ -4,9 +4,13 @@ import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
 
-const QuizContainer = ({ userName, quiz }) => {
+const QuizContainer = ({
+    userName,
+    quiz,
+    questionCounter,
+    setQuestionCounter,
+}) => {
     const [index, setIndex] = useState(0)
-    console.log(quiz)
 
     return (
         <div className="quiz-container">
@@ -23,6 +27,8 @@ const QuizContainer = ({ userName, quiz }) => {
                 index={index}
                 setIndex={setIndex}
                 quiz={quiz}
+                questionCounter={questionCounter}
+                setQuestionCounter={setQuestionCounter}
             />
         </div>
     )

@@ -12,6 +12,15 @@
     background-color: var(--blue);
 }
 
+.answer-correct {
+    background-color: green;
+}
+
+.answer-wrong {
+    background-color: red;
+    color: white;
+}
+
 @media (max-width: 992px) {
     .answer-container {
         width: 100%;
