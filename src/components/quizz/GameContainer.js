@@ -3,6 +3,8 @@ import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
+import ScoreContainer from '../score/ScoreContainer'
+import {useHistory} from "react-router-dom";
 
 const GameContainer = ({
     question,
@@ -14,8 +16,12 @@ const GameContainer = ({
     setIndex,
     quiz,
 }) => {
+    
+    let history = useHistory();
+ 
     const NextQuestion = () => {
-        index < quiz.length - 1 && setIndex(index + 1)
+         
+        index < quiz.length - 1 ? setIndex(index + 1) : history.push("/score");
     }
 
     //Randomize le display des réponses

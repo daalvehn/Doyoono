@@ -13,6 +13,7 @@ const HomepageContainer = ({
     setDifficulty,
     amount,
     setAmount,
+    setCategory,
 }) => {
     return (
         <div>
@@ -21,7 +22,10 @@ const HomepageContainer = ({
                     <NameInput userName={userName} setUserName={setUserName} />
                 </div>
                 <div className="quiz-properties">
-                    <ThemeInput />
+                    <ThemeInput
+                        quizThemes={quizThemes}
+                        setCategory={setCategory}
+
                     <DifficultyInput
                         setDifficulty={setDifficulty}
                         difficulty={difficulty}
