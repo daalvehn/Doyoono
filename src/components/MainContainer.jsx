@@ -45,7 +45,6 @@ const MainContainer = ({
                                 setUserName={setUserName}
                                 difficulty={difficulty}
                                 setDifficulty={setDifficulty}
-                                category={category}
                                 setCategory={setCategory}
                                 amount={amount}
                                 setAmount={setAmount}

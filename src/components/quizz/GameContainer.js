@@ -25,13 +25,11 @@ const GameContainer = ({
         e.preventDefault()
         setUserAnswer(e.target.value)
         setIsAnswersReveal(true)
-        setTimeout(NextQuestion, 2000)
+        setTimeout(NextQuestion, 2500)
     }
 
     const NextQuestion = () => {
-        index < quiz.length - 1 && setIndex(index + 1)
         index < quiz.length - 1 ? setIndex(index + 1) : history.push('/score')
-        setIsAnswersReveal(false)
     }
 
     useEffect(() => {
