@@ -6,7 +6,13 @@ import ThemeInput from './ThemeInput'
 import DifficultyInput from './DifficultyInput/DifficultyInput'
 import './HomepageContainer.css'
 
-const HomepageContainer = ({ userName, setUserName, difficulty, setDifficulty }) => {
+const HomepageContainer = ({
+    userName,
+    setUserName,
+    difficulty,
+    setDifficulty,
+    setCategory,
+}) => {
     return (
         <div>
             <form>
@@ -14,8 +20,15 @@ const HomepageContainer = ({ userName, setUserName, difficulty, setDifficulty })
                     <NameInput userName={userName} setUserName={setUserName} />
                 </div>
                 <div className="quiz-properties">
-                    <ThemeInput />
-                    <DifficultyInput  setDifficulty={setDifficulty} difficulty={difficulty} difficultyValues={difficultyValues}/>
+                    <ThemeInput
+                        quizThemes={quizThemes}
+                        setCategory={setCategory}
+                    />
+                    <DifficultyInput
+                        setDifficulty={setDifficulty}
+                        difficulty={difficulty}
+                        difficultyValues={difficultyValues}
+                    />
                     <NumberOfQuestionsInput />
                 </div>
                 <div className="go-btn">
