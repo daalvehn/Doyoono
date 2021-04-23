@@ -22,7 +22,7 @@ const MainContainer = ({
     return (
         <section className="container">
             <Router>
-                <ul>
+                <ul className="nav">
                     <li>
                         <Link to="/">Homepage</Link>
                     </li>
