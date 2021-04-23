@@ -5,18 +5,21 @@ import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
 import notif from '../../assets/audio/notif.mp3'
 
-const RetryButton = () => {
+const RetryButton = ({ setScore }) => {
     const [playNotif] = useSound(notif, { volume: 3 })
-    const [playSwoosh] = useSound(swoosh, { volume: 0.2 })
+    const [playSwoosh] = useSound(swoosh, { volume: 0.1 })
+
+    const handleOnClick = () => {
+        setScore(0)
+        playNotif()
+    }
     return (
-        <div className="div-button">
-            <Link
-                onMouseEnter={() => playSwoosh()}
-                onClick={() => playNotif()}
-                to="/"
-            >
-                Retry
-            </Link>
+        <div
+            className="div-button"
+            onClick={handleOnClick}
+            onMouseEnter={playSwoosh}
+        >
+            <Link to="/">Retry</Link>
         </div>
     )
 }

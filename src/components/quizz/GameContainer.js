@@ -18,12 +18,14 @@ const GameContainer = ({
     setIndex,
     quiz,
     amount,
+    setScore,
+    score,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [userAnswer, setUserAnswer] = useState('')
     const [questionCounter, setQuestionCounter] = useState(1)
     const [playCorrect] = useSound(correct, { volume: 1 })
-    const [playYeah] = useSound(yeah, { volume: 0.015 })
+    const [playYeah] = useSound(yeah, { volume: 0.02 })
 
     let history = useHistory()
 
@@ -77,28 +79,39 @@ const GameContainer = ({
             <div className="answers-container">
                 <Answer
                     answer={randomAnswers[0]}
-                    checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
-                    userAnswer={userAnswer}
+                    setIsAnswersReveal={setIsAnswersReveal}
+                    score={score}
+                    setScore={setScore}
+                    NextQuestion={NextQuestion}
                 />
                 <Answer
                     answer={randomAnswers[1]}
-                    checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setIsAnswersReveal={setIsAnswersReveal}
+                    score={score}
+                    setScore={setScore}
+                    NextQuestion={NextQuestion}
                 />
                 <Answer
                     answer={randomAnswers[2]}
-                    checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setIsAnswersReveal={setIsAnswersReveal}
+                    score={score}
+                    setScore={setScore}
+                    NextQuestion={NextQuestion}
                 />
                 <Answer
                     answer={randomAnswers[3]}
-                    checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setIsAnswersReveal={setIsAnswersReveal}
+                    score={score}
+                    setScore={setScore}
+                    NextQuestion={NextQuestion}
                 />
             </div>
         </div>

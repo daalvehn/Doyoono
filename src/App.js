@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react'
 
 function App() {
     const [quiz, setQuiz] = useState([])
-    const [amount, setAmount] = useState(10)
+    const [amount, setAmount] = useState(3)
     const [category, setCategory] = useState('')
     const [difficulty, setDifficulty] = useState('easy')
 

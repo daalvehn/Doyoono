@@ -6,8 +6,8 @@ import notif from '../../assets/audio/notif.mp3'
 import swoosh from '../../assets/audio/swoosh.mp3'
 
 const GoButton = () => {
-    const [playNotif] = useSound(notif, { volume: 3 })
-    const [playSwoosh] = useSound(swoosh, { volume: 0.2 })
+    const [playNotif] = useSound(notif, { volume: 1 })
+    const [playSwoosh] = useSound(swoosh, { volume: 0.1 })
     return (
         <div className="cta-btn">
             <Link
