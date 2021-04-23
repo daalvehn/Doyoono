@@ -6,7 +6,6 @@ html {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* height: 100vh; */
 }
 
 .main-container {
@@ -17,7 +16,7 @@ html {
     justify-content: space-between;
     margin: 2rem 0;
     width: 70%;
-    min-height: 868px;
+    min-height: 900px;
     border-radius: 40px;
     background-color: rgba(var(--light-beige-rgb), 0.9);
 }
@@ -39,5 +38,9 @@ footer {
 }
 
 #blockColorblindContent {
+    display: none;
+}
+
+.nav {
     display: none;
 }
