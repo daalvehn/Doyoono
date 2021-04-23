@@ -11,6 +11,8 @@ const HomepageContainer = ({
     setUserName,
     difficulty,
     setDifficulty,
+    amount,
+    setAmount,
     setCategory,
 }) => {
     return (
@@ -23,13 +25,16 @@ const HomepageContainer = ({
                     <ThemeInput
                         quizThemes={quizThemes}
                         setCategory={setCategory}
-                    />
+
                     <DifficultyInput
                         setDifficulty={setDifficulty}
                         difficulty={difficulty}
                         difficultyValues={difficultyValues}
                     />
-                    <NumberOfQuestionsInput />
+                    <NumberOfQuestionsInput
+                        amount={amount}
+                        setAmount={setAmount}
+                    />
                 </div>
                 <div className="go-btn">
                     <GoButton />
