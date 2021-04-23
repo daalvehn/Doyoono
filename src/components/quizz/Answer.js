@@ -35,7 +35,7 @@ const Answer = ({
                 isAnswersReveal &&
                 (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
             } answer-container`}
-            onClick={checkAnswer}
+            onClick={!isAnswersReveal && checkAnswer}
             onMouseEnter={playSwoosh}
         >
             <p dangerouslySetInnerHTML={{ __html: answer }} />
