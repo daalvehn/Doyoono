@@ -22,27 +22,21 @@ const GameContainer = ({
     score,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
-    const [userAnswer, setUserAnswer] = useState('')
     const [questionCounter, setQuestionCounter] = useState(1)
+    //Sound hook
     const [playCorrect] = useSound(correct, { volume: 1 })
     const [playYeah] = useSound(yeah, { volume: 0.02 })
 
     let history = useHistory()
 
-    const checkAnswer = (e) => {
-        e.preventDefault()
-        playCorrect()
-        setUserAnswer(e.target.value)
-        setIsAnswersReveal(true)
-        setTimeout(NextQuestion, 2500)
-    }
-
     const NextQuestion = () => {
-        index < quiz.length - 1 ? setIndex(index + 1) : ScorePage()
+        index < quiz.length - 1 ? setIndex(index + 1) : ScorePage() //Increase question index, or -> scorepage if index = question number
     }
 
     const ScorePage = () => {
+        //Son rigolo en changeant de page
         playYeah()
+        //On va sur la page du score
         history.push('/score')
     }
 

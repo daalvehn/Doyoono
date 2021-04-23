@@ -13,11 +13,6 @@ const Answer = ({
     score,
     NextQuestion,
 }) => {
-    let revealClass = ''
-    useEffect(() => {
-        revealClass = 'answer-wrong'
-    }, [isAnswersReveal])
-
     const [playSwoosh] = useSound(swoosh, { volume: 0.05 })
     const [playCorrect] = useSound(correct, { volume: 0.2 })
 
