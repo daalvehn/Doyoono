@@ -15,8 +15,6 @@ const MainContainer = ({
     setAmount,
     quiz,
     setQuiz,
-    questionCounter,
-    setQuestionCounter,
 }) => {
     const [score, setScore] = useState(0)
     const [userName, setUserName] = useState('Michel')
@@ -57,8 +55,7 @@ const MainContainer = ({
                             <QuizContainer
                                 userName={userName}
                                 quiz={quiz}
-                                questionCounter={questionCounter}
-                                setQuestionCounter={setQuestionCounter}
+                                amount={amount}
                                 score={score}
                                 setScore={setScore}
                             />

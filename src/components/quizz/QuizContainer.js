@@ -4,21 +4,14 @@ import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
 
-const QuizContainer = ({
-    userName,
-    quiz,
-    questionCounter,
-    setQuestionCounter,
-    score,
-    setScore
-}) => {
+const QuizContainer = ({ userName, quiz, amount, score, setScore }) => {
     const [index, setIndex] = useState(0)
 
     return (
         <div className="quiz-container">
             <div className="quiz-header">
                 <NameField userName={userName} />
-                <ScoreField score={score}/>
+                <ScoreField score={score} />
             </div>
             <GameContainer
                 question={quiz[index].question}
@@ -29,8 +22,7 @@ const QuizContainer = ({
                 index={index}
                 setIndex={setIndex}
                 quiz={quiz}
-                questionCounter={questionCounter}
-                setQuestionCounter={setQuestionCounter}
+                amount={amount}
                 setScore={setScore}
                 score={score}
             />

@@ -4,6 +4,9 @@ import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
 import { useHistory } from 'react-router-dom'
+import useSound from 'use-sound'
+import correct from '../../assets/audio/correct.mp3'
+import yeah from '../../assets/audio/yeah.mp3'
 
 const GameContainer = ({
     question,
@@ -14,17 +17,33 @@ const GameContainer = ({
     index,
     setIndex,
     quiz,
-    questionCounter,
-    setQuestionCounter,
+    amount,
     setScore,
     score,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
+    const [userAnswer, setUserAnswer] = useState('')
+    const [questionCounter, setQuestionCounter] = useState(1)
+    const [playCorrect] = useSound(correct, { volume: 1 })
+    const [playYeah] = useSound(yeah, { volume: 0.02 })
 
     let history = useHistory()
 
+    const checkAnswer = (e) => {
+        e.preventDefault()
+        playCorrect()
+        setUserAnswer(e.target.value)
+        setIsAnswersReveal(true)
+        setTimeout(NextQuestion, 2500)
+    }
+
     const NextQuestion = () => {
-        index < quiz.length - 1 ? setIndex(index + 1) : history.push('/score')
+        index < quiz.length - 1 ? setIndex(index + 1) : ScorePage()
+    }
+
+    const ScorePage = () => {
+        playYeah()
+        history.push('/score')
     }
 
     useEffect(() => {
@@ -52,7 +71,10 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
-            <QuestionCounter questionCounter={questionCounter} />
+            <QuestionCounter
+                questionCounter={questionCounter}
+                amount={amount}
+            />
             <Question question={question} />
             <div className="answers-container">
                 <Answer
