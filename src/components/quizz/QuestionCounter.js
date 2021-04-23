@@ -1,12 +1,13 @@
 import React from 'react'
 import './QuestionCounter.css'
 
-const QuestionCounter = () => {
-    /*const [questionAmount, setQuestionAmount] = useState (0/10);*/
-
+const QuestionCounter = ({ questionCounter }) => {
     return (
         <div className="question-counter">
-            <span>score</span>
+            <p>
+                {questionCounter < 10 && 0}
+                {questionCounter}/10
+            </p>
         </div>
     )
 }

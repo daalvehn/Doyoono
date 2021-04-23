@@ -7,7 +7,6 @@ import HomepageContainer from './homepage/HomepageContainer'
 import ScoreContainer from './score/ScoreContainer'
 import QuizContainer from './quizz/QuizContainer'
 
-
 const MainContainer = ({
     difficulty,
     setDifficulty,
@@ -16,6 +15,8 @@ const MainContainer = ({
     setAmount,
     quiz,
     setQuiz,
+    questionCounter,
+    setQuestionCounter,
 }) => {
     const [userName, setUserName] = useState('Michel')
     return (
@@ -52,14 +53,14 @@ const MainContainer = ({
                             />
                         </Route>
                         <Route path="/quiz">
-                            {' '}
                             <QuizContainer
                                 userName={userName}
                                 quiz={quiz}
-                            />{' '}
+                                questionCounter={questionCounter}
+                                setQuestionCounter={setQuestionCounter}
+                            />
                         </Route>
                         <Route path="/score">
-                            {' '}
                             <ScoreContainer userName={userName} />
                         </Route>
                     </Switch>

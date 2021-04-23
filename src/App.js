@@ -8,6 +8,7 @@ function App() {
     const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState('')
     const [difficulty, setDifficulty] = useState('easy')
+    const [questionCounter, setQuestionCounter] = useState(1)
 
     const fetchQuiz = async () => {
         const { data } = await axios.get(
@@ -31,6 +32,8 @@ function App() {
                     setAmount={setAmount}
                     quiz={quiz}
                     setQuiz={setQuiz}
+                    questionCounter={questionCounter}
+                    setQuestionCounter={setQuestionCounter}
                 />
             ) : (
                 'NO DATA'

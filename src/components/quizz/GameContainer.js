@@ -1,10 +1,9 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
-import ScoreContainer from '../score/ScoreContainer'
-import {useHistory} from "react-router-dom";
+import { useHistory } from 'react-router-dom'
 
 const GameContainer = ({
     question,
@@ -15,14 +14,28 @@ const GameContainer = ({
     index,
     setIndex,
     quiz,
+    questionCounter,
+    setQuestionCounter,
 }) => {
-    
-    let history = useHistory();
- 
-    const NextQuestion = () => {
-         
-        index < quiz.length - 1 ? setIndex(index + 1) : history.push("/score");
+    const [isAnswersReveal, setIsAnswersReveal] = useState(false)
+    const [userAnswer, setUserAnswer] = useState('')
+    let history = useHistory()
+
+    const checkAnswer = (e) => {
+        e.preventDefault()
+        setUserAnswer(e.target.value)
+        setIsAnswersReveal(true)
+        setTimeout(NextQuestion, 2500)
     }
+
+    const NextQuestion = () => {
+        index < quiz.length - 1 ? setIndex(index + 1) : history.push('/score')
+    }
+
+    useEffect(() => {
+        setQuestionCounter(index + 1)
+        setIsAnswersReveal(false)
+    }, [index])
 
     //Randomize le display des réponses
     const answers = [
@@ -40,18 +53,38 @@ const GameContainer = ({
         randomAnswers.unshift(answersToRandom[random])
         answersToRandom.splice(random, 1)
     }
-
     randomAnswers = answersToRandom.concat(randomAnswers)
 
     return (
         <div className="game-container">
-            <QuestionCounter />
+            <QuestionCounter questionCounter={questionCounter} />
             <Question question={question} />
             <div className="answers-container">
-                <Answer answer={randomAnswers[0]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[1]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[2]} nextquestion={NextQuestion} />
-                <Answer answer={randomAnswers[3]} nextquestion={NextQuestion} />
+                <Answer
+                    answer={randomAnswers[0]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                    userAnswer={userAnswer}
+                />
+                <Answer
+                    answer={randomAnswers[1]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
+                <Answer
+                    answer={randomAnswers[2]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
+                <Answer
+                    answer={randomAnswers[3]}
+                    checkAnswer={checkAnswer}
+                    correctAnswer={correctAnswer}
+                    isAnswersReveal={isAnswersReveal}
+                />
             </div>
         </div>
     )
