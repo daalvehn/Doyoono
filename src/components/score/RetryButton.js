@@ -6,7 +6,7 @@ import swoosh from '../../assets/audio/swoosh.mp3'
 import notif from '../../assets/audio/notif.mp3'
 
 const RetryButton = ({ setScore }) => {
-    const [playNotif] = useSound(notif, { volume: 3 })
+    const [playNotif] = useSound(notif, { volume: 1 })
     const [playSwoosh] = useSound(swoosh, { volume: 0.1 })
 
     const handleOnClick = () => {
