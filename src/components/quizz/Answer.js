@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react'
 import './Answer.css'
 
-const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal }) => {
+const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal, setUserAnswer }) => {
     let revealClass = ''
     useEffect(() => {
         revealClass = 'answer-wrong'
@@ -15,7 +15,7 @@ const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal }) => {
             } answer-container`}
             onClick={checkAnswer}
         >
-            <p dangerouslySetInnerHTML={{ __html: answer }} />
+            <p dangerouslySetInnerHTML={{ __html: answer }} onClick={(e) => setUserAnswer(e.target.value)}/>
         </div>
     )
 }

@@ -16,8 +16,8 @@ const GameContainer = ({
     quiz,
     questionCounter,
     setQuestionCounter,
-    score,
-    setScore
+    setScore,
+    score
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [userAnswer, setUserAnswer] = useState('')
@@ -27,11 +27,14 @@ const GameContainer = ({
         e.preventDefault()
         setUserAnswer(e.target.value)
         setIsAnswersReveal(true)
+        setScore(userAnswer === correct_answer && score + 100)
         setTimeout(NextQuestion, 2500)
     }
 
     const NextQuestion = () => {
+        
         index < quiz.length - 1 ? setIndex(index + 1) : history.push('/score')
+        
     }
 
     useEffect(() => {
@@ -67,25 +70,28 @@ const GameContainer = ({
                     checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
-                    userAnswer={userAnswer}
+                    setUserAnswer={setUserAnswer}
                 />
                 <Answer
                     answer={randomAnswers[1]}
                     checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setUserAnswer={setUserAnswer}
                 />
                 <Answer
                     answer={randomAnswers[2]}
                     checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setUserAnswer={setUserAnswer}
                 />
                 <Answer
                     answer={randomAnswers[3]}
                     checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    setUserAnswer={setUserAnswer}
                 />
             </div>
         </div>

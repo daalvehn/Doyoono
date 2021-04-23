@@ -32,6 +32,7 @@ const QuizContainer = ({
                 questionCounter={questionCounter}
                 setQuestionCounter={setQuestionCounter}
                 setScore={setScore}
+                score={score}
             />
         </div>
     )

@@ -18,7 +18,7 @@ const MainContainer = ({
     questionCounter,
     setQuestionCounter,
 }) => {
-    const [score, setScore] = useState=(0);
+    const [score, setScore] = useState(0);
     const [userName, setUserName] = useState('Michel')
     return (
         <section className="container">
