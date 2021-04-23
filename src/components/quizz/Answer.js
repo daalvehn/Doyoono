@@ -1,11 +1,26 @@
 import React, { useEffect } from 'react'
 import './Answer.css'
 
-const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal, setUserAnswer }) => {
+const Answer = ({
+    answer,
+    correctAnswer,
+    isAnswersReveal,
+    setIsAnswersReveal,
+    setScore,
+    score,
+    NextQuestion,
+}) => {
     let revealClass = ''
     useEffect(() => {
         revealClass = 'answer-wrong'
     }, [isAnswersReveal])
+
+    const checkAnswer = (e) => {
+        e.preventDefault()
+        setIsAnswersReveal(true)
+        setScore(answer === correctAnswer ? score + 100 : score)
+        setTimeout(NextQuestion, 2500)
+    }
 
     return (
         <div
@@ -15,7 +30,7 @@ const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal, setUserAn
             } answer-container`}
             onClick={checkAnswer}
         >
-            <p dangerouslySetInnerHTML={{ __html: answer }} onClick={(e) => setUserAnswer(e.target.value)}/>
+            <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
     )
 }
