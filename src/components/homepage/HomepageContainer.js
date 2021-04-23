@@ -25,6 +25,7 @@ const HomepageContainer = ({
                     <ThemeInput
                         quizThemes={quizThemes}
                         setCategory={setCategory}
+                    />
 
                     <DifficultyInput
                         setDifficulty={setDifficulty}
