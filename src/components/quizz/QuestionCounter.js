@@ -1,12 +1,12 @@
 import React from 'react'
 import './QuestionCounter.css'
 
-const QuestionCounter = ({ questionCounter }) => {
+const QuestionCounter = ({ questionCounter, amount }) => {
     return (
         <div className="question-counter">
             <p>
                 {questionCounter < 10 && 0}
-                {questionCounter}/10
+                {questionCounter}/{amount}
             </p>
         </div>
     )

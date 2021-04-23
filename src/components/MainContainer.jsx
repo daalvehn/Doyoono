@@ -15,8 +15,6 @@ const MainContainer = ({
     setAmount,
     quiz,
     setQuiz,
-    questionCounter,
-    setQuestionCounter,
 }) => {
     const [userName, setUserName] = useState('Michel')
     return (
@@ -56,8 +54,7 @@ const MainContainer = ({
                             <QuizContainer
                                 userName={userName}
                                 quiz={quiz}
-                                questionCounter={questionCounter}
-                                setQuestionCounter={setQuestionCounter}
+                                amount={amount}
                             />
                         </Route>
                         <Route path="/score">

@@ -14,11 +14,12 @@ const GameContainer = ({
     index,
     setIndex,
     quiz,
-    questionCounter,
-    setQuestionCounter,
+    amount,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [userAnswer, setUserAnswer] = useState('')
+    const [questionCounter, setQuestionCounter] = useState(1)
+
     let history = useHistory()
 
     const checkAnswer = (e) => {
@@ -57,7 +58,10 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
-            <QuestionCounter questionCounter={questionCounter} />
+            <QuestionCounter
+                questionCounter={questionCounter}
+                amount={amount}
+            />
             <Question question={question} />
             <div className="answers-container">
                 <Answer
