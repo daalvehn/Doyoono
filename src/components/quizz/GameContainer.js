@@ -17,8 +17,11 @@ const GameContainer = ({
     setQuestionCounter,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
+    const [userAnswer, setUserAnswer] = useState('')
 
-    const checkAnswer = () => {
+    const checkAnswer = (e) => {
+        e.preventDefault()
+        setUserAnswer(e.target.value)
         setIsAnswersReveal(true)
         setTimeout(NextQuestion, 2000)
     }
@@ -61,6 +64,7 @@ const GameContainer = ({
                     checkAnswer={checkAnswer}
                     correctAnswer={correctAnswer}
                     isAnswersReveal={isAnswersReveal}
+                    userAnswer={userAnswer}
                 />
                 <Answer
                     answer={randomAnswers[1]}

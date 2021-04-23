@@ -12,11 +12,14 @@
     background-color: var(--blue);
 }
 
-.answer-correct {
+.answer-correct,
+.answer-correct:hover {
     background-color: green;
+    color: white;
 }
 
-.answer-wrong {
+.answer-wrong,
+.answer-wrong:hover {
     background-color: red;
     color: white;
 }

@@ -9,15 +9,10 @@ const Answer = ({ answer, checkAnswer, correctAnswer, isAnswersReveal }) => {
 
     return (
         <div
-            className={
-                // 'answer-container' + ' ' + isAnswersReveal &&
-                // correctAnswer !== answer
-                //     ? 'answer-wrong'
-                //     : 'answer-correct'
-                ` ${
-                    answer === correctAnswer ? 'answer-correct' : 'answer-wrong'
-                } 'answer-container'`
-            }
+            className={` ${
+                isAnswersReveal &&
+                (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
+            } answer-container`}
             onClick={checkAnswer}
         >
             <p dangerouslySetInnerHTML={{ __html: answer }} />
