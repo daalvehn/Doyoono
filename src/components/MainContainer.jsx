@@ -7,6 +7,7 @@ import HomepageContainer from './homepage/HomepageContainer'
 import ScoreContainer from './score/ScoreContainer'
 import QuizContainer from './quizz/QuizContainer'
 
+
 const MainContainer = ({
     difficulty,
     setDifficulty,
