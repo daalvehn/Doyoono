@@ -9,6 +9,8 @@ const QuizContainer = ({
     quiz,
     questionCounter,
     setQuestionCounter,
+    score,
+    setScore
 }) => {
     const [index, setIndex] = useState(0)
 
@@ -16,7 +18,7 @@ const QuizContainer = ({
         <div className="quiz-container">
             <div className="quiz-header">
                 <NameField userName={userName} />
-                <ScoreField />
+                <ScoreField score={score}/>
             </div>
             <GameContainer
                 question={quiz[index].question}
@@ -29,6 +31,7 @@ const QuizContainer = ({
                 quiz={quiz}
                 questionCounter={questionCounter}
                 setQuestionCounter={setQuestionCounter}
+                setScore={setScore}
             />
         </div>
     )

@@ -18,6 +18,7 @@ const MainContainer = ({
     questionCounter,
     setQuestionCounter,
 }) => {
+    const [score, setScore] = useState=(0);
     const [userName, setUserName] = useState('Michel')
     return (
         <section className="container">
@@ -58,10 +59,12 @@ const MainContainer = ({
                                 quiz={quiz}
                                 questionCounter={questionCounter}
                                 setQuestionCounter={setQuestionCounter}
+                                score={score}
+                                setScore={setScore}
                             />
                         </Route>
                         <Route path="/score">
-                            <ScoreContainer userName={userName} />
+                            <ScoreContainer userName={userName} score={score}/>
                         </Route>
                     </Switch>
                     <footer>

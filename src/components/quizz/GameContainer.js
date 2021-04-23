@@ -16,6 +16,8 @@ const GameContainer = ({
     quiz,
     questionCounter,
     setQuestionCounter,
+    score,
+    setScore
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [userAnswer, setUserAnswer] = useState('')
