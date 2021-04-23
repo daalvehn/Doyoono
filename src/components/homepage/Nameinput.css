@@ -1,0 +1,28 @@
+.form-container {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 30px;
+    line-height: 37px;
+    text-align: center;
+    color: #404040;
+}
+.form h1 {
+    margin: 5rem 0 3rem;
+}
+
+.user-name {
+    width: 100%;
+    font-family: Montserrat;
+    border-radius: 10px;
+    font-size: 40px;
+    text-align: center;
+    color: #71ccff;
+    caret-color: transparent;
+    border: none;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    padding: 1rem 0;
+}
+::-webkit-input-placeholder {
+    text-align: center;
+}

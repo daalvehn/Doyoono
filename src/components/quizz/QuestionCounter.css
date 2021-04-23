@@ -1,0 +1,9 @@
+.question-counter {
+    background-color: var(--blue);
+    color: var(--white);
+    text-align: center;
+    width: 7rem;
+    padding: 0.5rem 0;
+    font-size: 1.5rem;
+    border-radius: 2rem 2rem 0 0;
+}

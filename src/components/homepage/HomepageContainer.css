@@ -1,0 +1,25 @@
+.quiz-properties {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.quiz-properties .label {
+    font-size: 1.6rem;
+    margin-bottom: 2rem;
+}
+
+.go-btn {
+    display: flex;
+    justify-content: center;
+    margin: 4rem 0;
+}
+
+.radio-button label {
+    font-size: 1.6rem;
+    margin: 0.7rem 0;
+}
+
+.name-input {
+    margin-bottom: 4rem;
+}

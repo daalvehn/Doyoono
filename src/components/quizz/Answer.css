@@ -1,0 +1,43 @@
+.answer-container {
+    background-color: var(--white);
+    text-align: center;
+    border-radius: 0.5rem;
+    padding: 0 3rem;
+    margin-top: 2rem;
+    width: 40%;
+}
+
+.answer-container:hover {
+    cursor: pointer;
+    background-color: var(--blue);
+}
+
+.answer-correct,
+.answer-correct:hover {
+    color: white;
+    font-weight: 700;
+    animation: 0.5s ease-in-out infinite alternate shine;
+}
+
+.answer-wrong,
+.answer-wrong:hover {
+    background-color: #988;
+    color: white;
+}
+
+@media (max-width: 992px) {
+    .answer-container {
+        width: 100%;
+    }
+}
+
+@keyframes shine {
+    from {
+        background-color: var(--blue);
+        transform: scale(1);
+    }
+    to {
+        background-color: #adf;
+        transform: scale(1.05);
+    }
+}

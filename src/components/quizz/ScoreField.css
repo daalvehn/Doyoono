@@ -1,0 +1,23 @@
+.score-field {
+    color: var(--purple);
+    font-size: 1.7rem;
+    font-weight: bold;
+    text-align: center;
+    margin: 0;
+}
+
+.score-field p {
+    margin: 0;
+}
+
+.score-quizz {
+    text-align: center;
+    vertical-align: center;
+    width: 15rem;
+    background-color: var(--purple);
+    color: var(--white);
+    font-size: 2.6rem;
+    border-radius: 5px;
+    padding: 10px 0;
+    margin: 0;
+}

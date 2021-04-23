@@ -1,0 +1,19 @@
+.final-score {
+    color: var(--purple);
+}
+.score {
+    font-size: 2.3rem;
+    font-weight: bold;
+    text-align: center;
+    vertical-align: center;
+    margin: 0;
+    
+   
+}
+.score-number {
+    font-size: 6rem;
+    text-align: center;
+    vertical-align: center;
+    margin: 0;
+  
+}
