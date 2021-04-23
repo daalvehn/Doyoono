@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react'
 function App() {
     const [quiz, setQuiz] = useState([])
     const [amount, setAmount] = useState(10)
-    const [category, setCategory] = useState(9)
+    const [category, setCategory] = useState('')
     const [difficulty, setDifficulty] = useState('easy')
     const [questionCounter, setQuestionCounter] = useState(1)
 
@@ -16,7 +16,7 @@ function App() {
         )
         setQuiz(data.results)
     }
-
+    console.log(category)
     useEffect(() => {
         fetchQuiz()
     }, [])
@@ -27,7 +27,6 @@ function App() {
                 <MainContainer
                     difficulty={difficulty}
                     setDifficulty={setDifficulty}
-                    category={category}
                     setCategory={setCategory}
                     amount={amount}
                     setAmount={setAmount}

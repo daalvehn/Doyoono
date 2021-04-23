@@ -3,6 +3,7 @@ import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
+import { useHistory } from 'react-router-dom'
 
 const GameContainer = ({
     question,
@@ -18,6 +19,7 @@ const GameContainer = ({
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [userAnswer, setUserAnswer] = useState('')
+    let history = useHistory()
 
     const checkAnswer = (e) => {
         e.preventDefault()
@@ -28,6 +30,7 @@ const GameContainer = ({
 
     const NextQuestion = () => {
         index < quiz.length - 1 && setIndex(index + 1)
+        index < quiz.length - 1 ? setIndex(index + 1) : history.push('/score')
         setIsAnswersReveal(false)
     }
 

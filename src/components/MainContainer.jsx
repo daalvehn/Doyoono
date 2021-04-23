@@ -10,7 +10,6 @@ import QuizContainer from './quizz/QuizContainer'
 const MainContainer = ({
     difficulty,
     setDifficulty,
-    category,
     setCategory,
     amount,
     setAmount,
