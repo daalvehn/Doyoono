@@ -1,16 +1,19 @@
 import React from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import './RetryButton.css'
 import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
 import notif from '../../assets/audio/notif.mp3'
 
-const RetryButton = ({ setScore }) => {
+const RetryButton = ({ setScore, setAmount, setCategory, setDifficulty }) => {
     const [playNotif] = useSound(notif, { volume: 1 })
     const [playSwoosh] = useSound(swoosh, { volume: 0.1 })
 
     const handleOnClick = () => {
         setScore(0)
+        setAmount(10)
+        setCategory(9)
+        setDifficulty('easy')
         playNotif()
     }
     return (

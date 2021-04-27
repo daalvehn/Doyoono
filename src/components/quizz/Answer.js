@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Answer.css'
 import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
@@ -30,7 +30,7 @@ const Answer = ({
                 isAnswersReveal &&
                 (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
             } answer-container`}
-            onClick={!isAnswersReveal && checkAnswer}
+            onClick={!isAnswersReveal ? checkAnswer : undefined}
             onMouseEnter={!isAnswersReveal && playSwoosh}
         >
             <p dangerouslySetInnerHTML={{ __html: answer }} />

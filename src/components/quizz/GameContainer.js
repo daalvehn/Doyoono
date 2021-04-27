@@ -5,7 +5,6 @@ import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
 import { useHistory } from 'react-router-dom'
 import useSound from 'use-sound'
-import correct from '../../assets/audio/correct.mp3'
 import yeah from '../../assets/audio/yeah.mp3'
 
 const GameContainer = ({
@@ -23,8 +22,8 @@ const GameContainer = ({
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
-    //Sound hook
-    const [playCorrect] = useSound(correct, { volume: 1 })
+    const [randomAnswers, setRandomAnswers] = useState([])
+
     const [playYeah] = useSound(yeah, { volume: 0.02 })
 
     let history = useHistory()
@@ -41,6 +40,7 @@ const GameContainer = ({
     }
 
     useEffect(() => {
+        randomizeAnswers()
         setQuestionCounter(index + 1)
         setIsAnswersReveal(false)
     }, [index])
@@ -53,16 +53,21 @@ const GameContainer = ({
         incorrect_answer1,
         incorrect_answer2,
     ]
-    const correctAnswer = answers[0]
-    const answersToRandom = answers.map((ans) => ans)
-    let randomAnswers = []
+    let correctAnswer = answers[0]
 
-    for (let i = 0; i < answersToRandom.length + 1; i++) {
-        const random = Math.floor(Math.random() * answersToRandom.length)
-        randomAnswers.unshift(answersToRandom[random])
-        answersToRandom.splice(random, 1)
+    const randomizeAnswers = () => {
+        const answersToRandom = [...answers]
+        let randomAnswersArray = []
+
+        for (let i = 0; i < answersToRandom.length + 1; i++) {
+            const random = Math.floor(Math.random() * answersToRandom.length)
+            randomAnswersArray.unshift(answersToRandom[random])
+            answersToRandom.splice(random, 1)
+        }
+        setRandomAnswers([...answersToRandom, ...randomAnswersArray])
     }
-    randomAnswers = answersToRandom.concat(randomAnswers)
+
+    console.log(correctAnswer)
 
     return (
         <div className="game-container">
