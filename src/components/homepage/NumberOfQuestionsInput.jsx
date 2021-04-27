@@ -1,6 +1,7 @@
 import React from 'react'
 import './NumberOfQuestionsInput.css'
 const NumberOfQuestionsInput = ({ amount, setAmount }) => {
+    console.log(amount)
     return (
         <div className="form-control">
             <div className="label" htmlFor="number_questions">
@@ -12,9 +13,7 @@ const NumberOfQuestionsInput = ({ amount, setAmount }) => {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
             >
-                <option selected="selected" value="10">
-                    10
-                </option>
+                <option defaultValue="10">10</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
             </select>
