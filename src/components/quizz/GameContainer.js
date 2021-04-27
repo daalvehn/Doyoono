@@ -55,6 +55,7 @@ const GameContainer = ({
     ]
     let correctAnswer = answers[0]
 
+
     const randomizeAnswers = () => {
         const answersToRandom = [...answers]
         let randomAnswersArray = []
@@ -64,7 +65,9 @@ const GameContainer = ({
             randomAnswersArray.unshift(answersToRandom[random])
             answersToRandom.splice(random, 1)
         }
+
         setRandomAnswers([...answersToRandom, ...randomAnswersArray])
+
     }
 
     console.log(correctAnswer)
