@@ -9,7 +9,7 @@ import QuizContainer from './quizz/QuizContainer'
 
 const MainContainer = ({}) => {
     const [score, setScore] = useState(0)
-    const [userName, setUserName] = useState('Michel')
+    const [userName, setUserName] = useState('Player')
     const [quiz, setQuiz] = useState([])
     const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState(9)
