@@ -11,10 +11,9 @@ const MainContainer = ({}) => {
     const [score, setScore] = useState(0)
     const [userName, setUserName] = useState('Player')
     const [quiz, setQuiz] = useState([])
-    const [amount, setAmount] = useState(10)
+    const [amount, setAmount] = useState(3)
     const [category, setCategory] = useState(9)
     const [difficulty, setDifficulty] = useState('easy')
-    const [randomAnswers, setRandomAnswers] = useState([])
 
     return (
         <section className="container">

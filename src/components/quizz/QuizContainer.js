@@ -27,6 +27,9 @@ const QuizContainer = ({
 
     useEffect(() => {
         fetchQuiz()
+        return () => {
+            setQuiz([])
+        }
     }, [])
 
     return (

@@ -24,7 +24,7 @@ const GameContainer = ({
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
-    const [questionCounter, setQuestionCounter] = useState(1)
+
     const [playYeah] = useSound(yeah, { volume: 0.02 })
 
     let history = useHistory()
@@ -45,15 +45,15 @@ const GameContainer = ({
     }, [index])
 
     //Randomize le display des réponses
-    let correctAnswer = ''
+    const answers = [
+        correct_answer,
+        incorrect_answer0,
+        incorrect_answer1,
+        incorrect_answer2,
+    ]
+    let correctAnswer = answers[0]
+
     const randomizeAnswers = () => {
-        const answers = [
-            correct_answer,
-            incorrect_answer0,
-            incorrect_answer1,
-            incorrect_answer2,
-        ]
-        correctAnswer = answers[0]
         const answersToRandom = answers.map((ans) => ans)
         let randomAnswersArray = []
 
@@ -65,7 +65,7 @@ const GameContainer = ({
         setRandomAnswers(answersToRandom.concat(randomAnswersArray))
     }
 
-    console.log
+    console.log(correctAnswer)
 
     return (
         <div className="game-container">
