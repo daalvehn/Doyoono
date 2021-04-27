@@ -1,7 +1,6 @@
 import React from 'react'
 import './NumberOfQuestionsInput.css'
 const NumberOfQuestionsInput = ({ amount, setAmount }) => {
-    console.log(amount)
     return (
         <div className="form-control">
             <div className="label" htmlFor="number_questions">
