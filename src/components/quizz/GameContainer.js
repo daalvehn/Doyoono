@@ -46,6 +46,7 @@ const GameContainer = ({
     }, [index])
 
     //Randomize le display des réponses
+
     const answers = [
         correct_answer,
         incorrect_answer0,
