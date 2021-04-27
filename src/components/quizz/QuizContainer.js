@@ -24,11 +24,11 @@ const QuizContainer = ({
         setQuiz(data.results)
     }
 
-    console.log(quiz)
-    console.log(category, difficulty, amount)
-
     useEffect(() => {
         fetchQuiz()
+        return () => {
+            setQuiz([])
+        }
     }, [])
 
     return (
