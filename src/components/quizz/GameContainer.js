@@ -19,8 +19,11 @@ const GameContainer = ({
     amount,
     setScore,
     score,
+    randomAnswers,
+    setRandomAnswers,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
+    const [questionCounter, setQuestionCounter] = useState(1)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [playYeah] = useSound(yeah, { volume: 0.02 })
 
@@ -36,29 +39,33 @@ const GameContainer = ({
     }
 
     useEffect(() => {
-        console.log(randomAnswers)
+        randomizeAnswers()
         setQuestionCounter(index + 1)
         setIsAnswersReveal(false)
     }, [index])
 
     //Randomize le display des réponses
-    const answers = [
-        correct_answer,
-        incorrect_answer0,
-        incorrect_answer1,
-        incorrect_answer2,
-    ]
-    const correctAnswer = answers[0]
-    const answersToRandom = answers.map((ans) => ans)
+    let correctAnswer = ''
+    const randomizeAnswers = () => {
+        const answers = [
+            correct_answer,
+            incorrect_answer0,
+            incorrect_answer1,
+            incorrect_answer2,
+        ]
+        correctAnswer = answers[0]
+        const answersToRandom = answers.map((ans) => ans)
+        let randomAnswersArray = []
 
-    let randomAnswers = []
-
-    for (let i = 0; i < answersToRandom.length + 1; i++) {
-        const random = Math.floor(Math.random() * answersToRandom.length)
-        randomAnswers.unshift(answersToRandom[random])
-        answersToRandom.splice(random, 1)
+        for (let i = 0; i < answersToRandom.length + 1; i++) {
+            const random = Math.floor(Math.random() * answersToRandom.length)
+            randomAnswersArray.unshift(answersToRandom[random])
+            answersToRandom.splice(random, 1)
+        }
+        setRandomAnswers(answersToRandom.concat(randomAnswersArray))
     }
-    randomAnswers = answersToRandom.concat(randomAnswers)
+
+    console.log
 
     return (
         <div className="game-container">

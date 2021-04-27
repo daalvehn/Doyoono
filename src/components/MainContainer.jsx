@@ -14,6 +14,7 @@ const MainContainer = ({}) => {
     const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState(9)
     const [difficulty, setDifficulty] = useState('easy')
+    const [randomAnswers, setRandomAnswers] = useState([])
 
     return (
         <section className="container">
@@ -64,6 +65,9 @@ const MainContainer = ({}) => {
                                 userName={userName}
                                 score={score}
                                 setScore={setScore}
+                                setDifficulty={setDifficulty}
+                                setAmount={setAmount}
+                                setCategory={setCategory}
                             />
                         </Route>
                     </Switch>

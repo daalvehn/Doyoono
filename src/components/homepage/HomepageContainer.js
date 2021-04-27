@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import NameInput from './NameInput'
 import NumberOfQuestionsInput from './NumberOfQuestionsInput'
 import GoButton from './GoButton'

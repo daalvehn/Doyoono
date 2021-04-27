@@ -1,6 +1,6 @@
 import React from 'react'
 import './GoButton.css'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 import useSound from 'use-sound'
 import notif from '../../assets/audio/notif.mp3'
 import swoosh from '../../assets/audio/swoosh.mp3'

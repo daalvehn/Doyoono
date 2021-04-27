@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React from 'react'
 import './Answer.css'
 import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
