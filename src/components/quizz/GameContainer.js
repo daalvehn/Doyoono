@@ -19,11 +19,10 @@ const GameContainer = ({
     amount,
     setScore,
     score,
-    randomAnswers,
-    setRandomAnswers,
 }) => {
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
+    const [randomAnswers, setRandomAnswers] = useState([])
 
     const [playYeah] = useSound(yeah, { volume: 0.02 })
 

@@ -16,7 +16,6 @@ const QuizContainer = ({
     category,
 }) => {
     const [index, setIndex] = useState(0)
-    const [randomAnswers, setRandomAnswers] = useState([])
 
     const fetchQuiz = async () => {
         const { data } = await axios.get(
@@ -51,8 +50,6 @@ const QuizContainer = ({
                     amount={amount}
                     setScore={setScore}
                     score={score}
-                    randomAnswers={randomAnswers}
-                    setRandomAnswers={setRandomAnswers}
                 />
             ) : (
                 'NO DATA'
