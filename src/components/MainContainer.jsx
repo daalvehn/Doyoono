@@ -53,6 +53,9 @@ const MainContainer = ({}) => {
                                 setScore={setScore}
                                 difficulty={difficulty}
                                 category={category}
+                                setAmount={setAmount}
+                                setCategory={setCategory}
+                                setDifficulty={setDifficulty}
                             />
                         </Route>
                         <Route path="/score">
