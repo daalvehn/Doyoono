@@ -29,11 +29,13 @@ const GameContainer = ({
     let history = useHistory()
 
     const NextQuestion = () => {
-        index < quiz.length - 1 ? setIndex(index + 1) : ScorePage()
+        index < quiz.length - 1 ? setIndex(index + 1) : ScorePage() //Increase question index, or -> scorepage if index = question number
     }
 
     const ScorePage = () => {
+        //Son rigolo en changeant de page
         playYeah()
+        //On va sur la page du score
         history.push('/score')
     }
 
@@ -44,6 +46,7 @@ const GameContainer = ({
     }, [index])
 
     //Randomize le display des réponses
+
     const answers = [
         correct_answer,
         incorrect_answer0,
@@ -52,8 +55,9 @@ const GameContainer = ({
     ]
     let correctAnswer = answers[0]
 
+
     const randomizeAnswers = () => {
-        const answersToRandom = answers.map((ans) => ans)
+        const answersToRandom = [...answers]
         let randomAnswersArray = []
 
         for (let i = 0; i < answersToRandom.length + 1; i++) {
@@ -61,7 +65,9 @@ const GameContainer = ({
             randomAnswersArray.unshift(answersToRandom[random])
             answersToRandom.splice(random, 1)
         }
-        setRandomAnswers(answersToRandom.concat(randomAnswersArray))
+
+        setRandomAnswers([...answersToRandom, ...randomAnswersArray])
+
     }
 
     console.log(correctAnswer)
