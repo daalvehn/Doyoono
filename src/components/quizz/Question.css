@@ -8,4 +8,11 @@
     padding: 2rem 3rem;
     min-width: 700px;
     height: 127px;
+    /* check */
+    width: 640px;
+    background-color: var(--white);
+    border-radius: 0.5rem;
+    padding: 2rem 3rem;
+    text-align: center;
+    align-content: space-around;
 }

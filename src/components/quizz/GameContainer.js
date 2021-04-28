@@ -74,11 +74,13 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
-            <QuestionCounter
-                questionCounter={questionCounter}
-                amount={amount}
-            />
-            <Question question={question} />
+            <div>
+                <QuestionCounter
+                    questionCounter={questionCounter}
+                    amount={amount}
+                />
+                <Question question={question} />
+            </div>
             <div className="answers-container">
                 <Answer
                     answer={randomAnswers[0]}

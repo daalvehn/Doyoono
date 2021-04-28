@@ -2,10 +2,14 @@
     text-align: center;
 }
 
+.homepage-container {
+    max-width: 100%;
+}
+
 .quiz-properties {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    margin: 0 1rem 0 1rem;
 }
 
 .quiz-properties .label {
@@ -25,5 +29,5 @@
 }
 
 .name-input {
-    margin-bottom: 4rem;
+    margin: 0 1rem 4rem 1rem;
 }

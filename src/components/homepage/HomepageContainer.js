@@ -21,30 +21,32 @@ const HomepageContainer = ({
             <div className="logo">
                 <img alt="logo" src={logo} />
             </div>
-            <form>
-                <div className="name-input">
-                    <NameInput userName={userName} setUserName={setUserName} />
-                </div>
-                <div className="quiz-properties">
-                    <ThemeInput
-                        quizThemes={quizThemes}
-                        setCategory={setCategory}
-                    />
+            <div className="homepage-container">
+                <form>
+                    <div className="name-input">
+                        <NameInput userName={userName} setUserName={setUserName} />
+                    </div>
+                    <div className="quiz-properties">
+                        <ThemeInput
+                            quizThemes={quizThemes}
+                            setCategory={setCategory}
+                        />
 
-                    <DifficultyInput
-                        setDifficulty={setDifficulty}
-                        difficulty={difficulty}
-                        difficultyValues={difficultyValues}
-                    />
-                    <NumberOfQuestionsInput
-                        amount={amount}
-                        setAmount={setAmount}
-                    />
-                </div>
-                <div className="go-btn">
-                    <GoButton />
-                </div>
-            </form>
+                        <DifficultyInput
+                            setDifficulty={setDifficulty}
+                            difficulty={difficulty}
+                            difficultyValues={difficultyValues}
+                        />
+                        <NumberOfQuestionsInput
+                            amount={amount}
+                            setAmount={setAmount}
+                        />
+                    </div>
+                    <div className="go-btn">
+                        <GoButton />
+                    </div>
+                </form>
+            </div>
         </div>
     )
 }
