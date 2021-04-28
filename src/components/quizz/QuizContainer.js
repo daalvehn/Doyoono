@@ -18,9 +18,13 @@ const QuizContainer = ({
     const [index, setIndex] = useState(0)
 
     const fetchQuiz = async () => {
-        const { data } = await axios.get(
-            `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`
-        )
+        const { data } = await axios
+            .get(
+                `https://opentdb.com/api.php?amount=${amount}&category=${category}&difficulty=${difficulty}&type=multiple`
+            )
+            .catch((error) => {
+                console.log(error)
+            })
         setQuiz(data.results)
     }
 

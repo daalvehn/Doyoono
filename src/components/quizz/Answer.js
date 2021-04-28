@@ -13,15 +13,17 @@ const Answer = ({
     score,
     NextQuestion,
 }) => {
-    const [playSwoosh] = useSound(swoosh, { volume: 0.05 })
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
     const [playCorrect] = useSound(correct, { volume: 0.2 })
 
     const checkAnswer = (e) => {
-        e.preventDefault()
-        playCorrect()
-        setIsAnswersReveal(true)
-        setScore(answer === correctAnswer ? score + 100 : score)
-        setTimeout(NextQuestion, 2500)
+        if (!isAnswersReveal) {
+            e.preventDefault()
+            playCorrect()
+            setIsAnswersReveal(true)
+            setScore(answer === correctAnswer ? score + 100 : score)
+            setTimeout(NextQuestion, 2500)
+        }
     }
 
     return (
@@ -30,8 +32,9 @@ const Answer = ({
                 isAnswersReveal &&
                 (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
             } answer-container`}
-            onClick={!isAnswersReveal ? checkAnswer : undefined}
-            onMouseEnter={!isAnswersReveal && playSwoosh}
+            onClick={checkAnswer}
+            onMouseEnter={!isAnswersReveal ? playSwoosh : undefined}
+            onMouseLeave={stopSwoosh}
         >
             <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
