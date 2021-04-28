@@ -17,12 +17,12 @@ const HomepageContainer = ({
     setCategory,
 }) => {
     return (
-        <div>
+        <div className="homepage-container">
             <div className="logo">
                 <img alt="logo" src={logo} />
             </div>
-            <div className="homepage-container">
-                <form>
+            <div className="homepage-inputs">
+                <div>
                     <div className="name-input">
                         <NameInput userName={userName} setUserName={setUserName} />
                     </div>
@@ -31,7 +31,6 @@ const HomepageContainer = ({
                             quizThemes={quizThemes}
                             setCategory={setCategory}
                         />
-
                         <DifficultyInput
                             setDifficulty={setDifficulty}
                             difficulty={difficulty}
@@ -45,7 +44,7 @@ const HomepageContainer = ({
                     <div className="go-btn">
                         <GoButton />
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     )
