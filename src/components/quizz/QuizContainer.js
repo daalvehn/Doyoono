@@ -4,6 +4,8 @@ import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
 import axios from 'axios'
+import music from '../../assets/audio/music.mp3'
+import notif from '../../assets/audio/notif.mp3'
 
 const QuizContainer = ({
     userName,
@@ -17,6 +19,16 @@ const QuizContainer = ({
 }) => {
     const [index, setIndex] = useState(0)
 
+    const musicPlay = new Audio(music)
+    const notifPlay = new Audio(notif)
+
+    const handleSound = () => {
+        musicPlay.volume = 0.01
+        musicPlay.loop = true
+        musicPlay.play()
+        notifPlay.play()
+    }
+
     const fetchQuiz = async () => {
         const { data } = await axios
             .get(
@@ -29,9 +41,11 @@ const QuizContainer = ({
     }
 
     useEffect(() => {
+        handleSound()
         fetchQuiz()
         return () => {
             setQuiz([])
+            musicPlay.pause()
         }
     }, [])
 
