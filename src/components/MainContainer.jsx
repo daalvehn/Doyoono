@@ -1,7 +1,7 @@
 import React from 'react'
 import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
-import logo from '../assets/images/logo.svg'
+
 import './MainContainer.css'
 import HomepageContainer from './homepage/HomepageContainer'
 import ScoreContainer from './score/ScoreContainer'
@@ -30,10 +30,6 @@ const MainContainer = () => {
                     </li>
                 </ul>
                 <div className="main-container">
-                    <header>
-                        <img alt="logo" src={logo} />
-                    </header>
-
                     <Switch>
                         <Route exact path="/">
                             <HomepageContainer

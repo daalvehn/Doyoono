@@ -5,5 +5,6 @@
 .quiz-header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     padding: 0 2rem 4rem 2rem;
 }

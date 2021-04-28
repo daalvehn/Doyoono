@@ -5,6 +5,7 @@ import GoButton from './GoButton'
 import ThemeInput from './ThemeInput'
 import DifficultyInput from './DifficultyInput/DifficultyInput'
 import './HomepageContainer.css'
+import logo from '../../assets/images/logo.svg'
 
 const HomepageContainer = ({
     userName,
@@ -17,6 +18,9 @@ const HomepageContainer = ({
 }) => {
     return (
         <div>
+            <div className="logo">
+                <img alt="logo" src={logo} />
+            </div>
             <form>
                 <div className="name-input">
                     <NameInput userName={userName} setUserName={setUserName} />

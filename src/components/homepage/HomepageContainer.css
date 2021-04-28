@@ -1,3 +1,7 @@
+.logo {
+    text-align: center;
+}
+
 .quiz-properties {
     display: flex;
     justify-content: space-between;

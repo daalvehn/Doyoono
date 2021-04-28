@@ -4,6 +4,7 @@ import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
 import './ScoreContainer.css'
 import yeah from '../../assets/audio/yeah.mp3'
+import logo from '../../assets/images/logo.svg'
 
 const ScoreContainer = ({
     userName,
@@ -25,6 +26,9 @@ const ScoreContainer = ({
 
     return (
         <div className="score-page">
+            <div className="logo">
+                <img alt="logo" src={logo} />
+            </div>
             <FinalMessage userName={userName} />
             <FinalScore score={score} />
             <RetryButton
