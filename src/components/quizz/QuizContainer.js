@@ -4,6 +4,7 @@ import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
 import axios from 'axios'
+import logo from '../../assets/images/logo.svg'
 
 const QuizContainer = ({
     userName,
@@ -35,6 +36,9 @@ const QuizContainer = ({
         <div className="quiz-container">
             <div className="quiz-header">
                 <NameField userName={userName} />
+                <div className="logo">
+                    <img alt="logo" src={logo} />
+                </div>
                 <ScoreField score={score} />
             </div>
             {quiz.length > 0 ? (
