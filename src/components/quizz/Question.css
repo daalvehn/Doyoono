@@ -1,8 +1,11 @@
 .question-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
     background-color: var(--white);
     border-radius: 0.5rem;
     padding: 2rem 3rem;
-    text-align: center;
-    align-content: space-around;
     min-width: 700px;
+    height: 127px;
 }
