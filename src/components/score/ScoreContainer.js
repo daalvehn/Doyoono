@@ -14,14 +14,18 @@ const ScoreContainer = ({
     setCategory,
     setDifficulty,
 }) => {
+    const AnimScore = () => {
+        confetti({
+            particleCount: 100,
+            startVelocity: 30,
+            spread: 180,
+            scalar: 1.2,
+        })
+    }
     useEffect(() => {
+        AnimScore()
         const interval = setInterval(() => {
-            confetti({
-                particleCount: 100,
-                startVelocity: 30,
-                spread: 180,
-                scalar: 1.2,
-            })
+            AnimScore()
         }, 1000)
 
         return () => clearInterval(interval)

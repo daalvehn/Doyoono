@@ -9,9 +9,11 @@
     margin: 0;
 }
 .score-number {
+    position: absolute;
+    left: 0;
+    right: 0;
     font-size: 6rem;
     text-align: center;
-    vertical-align: center;
     margin: 0;
     animation-duration: 1s;
     animation-delay: 0s;
