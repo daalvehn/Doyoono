@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Answer.css'
 import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
@@ -15,13 +15,17 @@ const Answer = ({
 }) => {
     const [playSwoosh] = useSound(swoosh, { volume: 0.05 })
     const [playCorrect] = useSound(correct, { volume: 0.2 })
+    const [playerAnswerClass, setPlayerAnswerClass] = useState('')
 
     const checkAnswer = (e) => {
         e.preventDefault()
         playCorrect()
+        setPlayerAnswerClass(
+            +answer === correctAnswer ? 'player-correct' : 'player-wrong'
+        )
         setIsAnswersReveal(true)
         setScore(answer === correctAnswer ? score + 100 : score)
-        setTimeout(NextQuestion, 2500)
+        // setTimeout(NextQuestion, 2500)
     }
 
     return (
@@ -29,7 +33,7 @@ const Answer = ({
             className={` ${
                 isAnswersReveal &&
                 (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
-            } answer-container`}
+            } ${playerAnswerClass} answer-container`}
             onClick={!isAnswersReveal ? checkAnswer : undefined}
             onMouseEnter={!isAnswersReveal && playSwoosh}
         >
