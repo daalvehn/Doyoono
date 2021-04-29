@@ -1,8 +1,9 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
 import './ScoreContainer.css'
+import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
 import { useHistory } from 'react-router-dom'
 
@@ -14,6 +15,7 @@ const ScoreContainer = ({
     setCategory,
     setDifficulty,
 }) => {
+
     //Go back home depuis logo
     const history = useHistory()
 
@@ -24,6 +26,16 @@ const ScoreContainer = ({
         setDifficulty('easy')
         history.push('/')
     }
+
+    const handleAudio = () => {
+        const yeahPlay = new Audio(yeah)
+        yeahPlay.volume = 0.02
+        yeahPlay.play()
+    }
+
+    useEffect(() => {
+        handleAudio()
+    }, [])
 
     return (
         <div className="score-page">
