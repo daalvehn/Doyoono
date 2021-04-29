@@ -17,7 +17,9 @@ const ThemeInput = ({ quizThemes, setCategory }) => {
             </div>
             <select name="category" id="category" onChange={handlChange}>
                 {quizThemes.map((item) => (
-                    <option value={item.theme}>{item.theme}</option>
+                    <option key={item.theme} value={item.theme}>
+                        {item.theme}
+                    </option>
                 ))}
             </select>
         </div>

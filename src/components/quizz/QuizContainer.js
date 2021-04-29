@@ -52,6 +52,7 @@ const QuizContainer = ({
             setQuiz([])
             musicPlay.pause()
         }
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [])
 
     //Go back home depuis logo

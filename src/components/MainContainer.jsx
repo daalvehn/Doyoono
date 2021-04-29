@@ -70,7 +70,7 @@ const MainContainer = () => {
                         </Route>
                     </Switch>
                     <footer>
-                    <a>Ressources / Crédits</a>
+                        <p>Ressources / Crédits</p>
                     </footer>
                 </div>
             </Router>

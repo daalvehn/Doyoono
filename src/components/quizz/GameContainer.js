@@ -37,6 +37,7 @@ const GameContainer = ({
         randomizeAnswers()
         setQuestionCounter(index + 1)
         setIsAnswersReveal(false)
+        // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index])
 
     //Randomize le display des réponses
@@ -61,8 +62,6 @@ const GameContainer = ({
 
         setRandomAnswers([...answersToRandom, ...randomAnswersArray])
     }
-
-    console.log(correctAnswer)
 
     return (
         <div className="game-container">
