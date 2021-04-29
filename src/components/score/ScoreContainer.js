@@ -16,6 +16,7 @@ const ScoreContainer = ({
     setCategory,
     setDifficulty,
 }) => {
+    //Animation confettis
     const AnimScore = () => {
         confetti({
             particleCount: 100,
@@ -46,6 +47,7 @@ const ScoreContainer = ({
         history.push('/')
     }
 
+    //Animation sonore
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
         yeahPlay.volume = 0.02

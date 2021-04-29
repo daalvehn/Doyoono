@@ -32,7 +32,7 @@ footer {
     border-radius: 0px 0px 40px 40px;
 }
 
-.main-container a {
+footer p {
     text-decoration: none;
     font-size: 1.6rem;
     color: var(--light-orange);
