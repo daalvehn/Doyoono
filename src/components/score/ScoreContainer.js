@@ -3,6 +3,7 @@ import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
 import './ScoreContainer.css'
+import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
 import confetti from 'canvas-confetti'
 
@@ -29,6 +30,15 @@ const ScoreContainer = ({
         }, 1000)
 
         return () => clearInterval(interval)
+
+    const handleAudio = () => {
+        const yeahPlay = new Audio(yeah)
+        yeahPlay.volume = 0.02
+        yeahPlay.play()
+    }
+
+    useEffect(() => {
+        handleAudio()
     }, [])
 
     return (

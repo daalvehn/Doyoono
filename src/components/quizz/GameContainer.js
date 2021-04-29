@@ -4,8 +4,6 @@ import Question from './Question'
 import Answer from './Answer'
 import QuestionCounter from './QuestionCounter'
 import { useHistory } from 'react-router-dom'
-import useSound from 'use-sound'
-import yeah from '../../assets/audio/yeah.mp3'
 
 const GameContainer = ({
     question,
@@ -24,8 +22,6 @@ const GameContainer = ({
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
 
-    const [playYeah] = useSound(yeah, { volume: 0.02 })
-
     let history = useHistory()
 
     const NextQuestion = () => {
@@ -33,8 +29,6 @@ const GameContainer = ({
     }
 
     const ScorePage = () => {
-        //Son rigolo en changeant de page
-        playYeah()
         //On va sur la page du score
         history.push('/score')
     }
@@ -55,7 +49,6 @@ const GameContainer = ({
     ]
     let correctAnswer = answers[0]
 
-
     const randomizeAnswers = () => {
         const answersToRandom = [...answers]
         let randomAnswersArray = []
@@ -67,7 +60,6 @@ const GameContainer = ({
         }
 
         setRandomAnswers([...answersToRandom, ...randomAnswersArray])
-
     }
 
     console.log(correctAnswer)
