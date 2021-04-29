@@ -1,16 +1,46 @@
 .game-container {
-    display: flex;
-    flex-direction: column;
+    max-width: 800px;
     background-color: var(--beige);
     border-radius: 2rem;
-    width: 900px;
-    font-size: 2.3rem;
-    padding: 5rem 8rem 6rem 8rem;
+    padding: 5rem;
+    margin: 5rem auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.question {
+    width: auto;
 }
 
 .answers-container {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
     width: 100%;
+    margin-top: 2rem;
+    text-align: center;
+}
+
+@media screen and (max-width: 1265px) {
+    .game-container {
+        padding: 2rem;
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .answers-container {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .game-container {
+    }
+
+    .answers-container {
+        width: auto;
+    }
 }
