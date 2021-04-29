@@ -1,10 +1,26 @@
 .quiz-container {
     min-height: 600px;
+    padding: 0 5rem;
 }
 
 .quiz-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 2rem 4rem 2rem;
+    padding-bottom: 4rem;
+    margin: 0 3.5rem;
+}
+
+@media screen and (max-width: 1265px) {
+    .quiz-header {
+        flex-direction: column;
+    }
+
+    .logo {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: px) {
+
 }

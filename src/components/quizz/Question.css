@@ -5,14 +5,14 @@
     text-align: center;
     background-color: var(--white);
     border-radius: 0.5rem;
-    padding: 2rem 3rem;
-    min-width: 700px;
+    min-width: 80%;
     height: 127px;
-    /* check */
-    width: 640px;
-    background-color: var(--white);
-    border-radius: 0.5rem;
-    padding: 2rem 3rem;
-    text-align: center;
-    align-content: space-around;
+    font-size: 2.1rem;
+    padding: 0 3rem;
+}
+
+@media screen and (max-width: 1265px) {
+    .question-container {
+        width: 90%;
+    }
 }

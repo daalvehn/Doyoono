@@ -1,10 +1,13 @@
 .answer-container {
     background-color: var(--white);
-    text-align: center;
     border-radius: 0.5rem;
     padding: 0 3rem;
     margin-top: 2rem;
     width: 40%;
+    font-size: 2.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .answer-container:hover {
@@ -25,12 +28,6 @@
     color: white;
 }
 
-@media (max-width: 992px) {
-    .answer-container {
-        width: 100%;
-    }
-}
-
 @keyframes shine {
     from {
         background-color: var(--blue);
@@ -39,5 +36,11 @@
     to {
         background-color: #adf;
         transform: scale(1.05);
+    }
+}
+
+@media screen and (max-width: 1265px) {
+    .answer-container {
+        width: 90%;
     }
 }

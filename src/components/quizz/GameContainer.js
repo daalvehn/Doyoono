@@ -74,7 +74,7 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
-            <div>
+            <div className="question">
                 <QuestionCounter
                     questionCounter={questionCounter}
                     amount={amount}
