@@ -16,25 +16,41 @@
 
 .answer-correct,
 .answer-correct:hover {
+    background-color: green;
     color: white;
+    animation: none;
     font-weight: 700;
-    animation: 0.5s ease-in-out infinite alternate shine;
+    animation: 0.5s ease-in-out infinite alternate shineZoom;
 }
 
-.answer-wrong,
-.answer-wrong:hover {
-    background-color: #988;
+.player-correct,
+.player-correct:hover {
+    animation: 0.5s ease-in-out infinite alternate shineZoom,
+        0.5s ease-in-out infinite alternate shineColor;
+}
+
+.player-wrong,
+.player-wrong:hover {
+    font-weight: 500;
+    background-color: red;
     color: white;
 }
 
-@keyframes shine {
+@keyframes shineZoom {
     from {
-        background-color: var(--blue);
         transform: scale(1);
     }
     to {
-        background-color: #adf;
         transform: scale(1.05);
+    }
+}
+
+@keyframes shineColor {
+    from {
+        background-color: var(--blue);
+    }
+    to {
+        background-color: #adf;
     }
 }
 
