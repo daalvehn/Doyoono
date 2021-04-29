@@ -21,7 +21,7 @@ const Answer = ({
         e.preventDefault()
         playCorrect()
         setPlayerAnswerClass(
-            +answer === correctAnswer ? 'player-correct' : 'player-wrong'
+            answer === correctAnswer ? 'player-correct' : 'player-wrong'
         )
         setIsAnswersReveal(true)
         setScore(answer === correctAnswer ? score + 100 : score)
