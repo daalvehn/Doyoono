@@ -30,6 +30,7 @@ const ScoreContainer = ({
         }, 1000)
 
         return () => clearInterval(interval)
+    })
 
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
