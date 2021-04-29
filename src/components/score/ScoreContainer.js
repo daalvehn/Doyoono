@@ -6,6 +6,7 @@ import './ScoreContainer.css'
 import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
 import confetti from 'canvas-confetti'
+import { useHistory } from 'react-router-dom'
 
 const ScoreContainer = ({
     userName,
@@ -32,6 +33,17 @@ const ScoreContainer = ({
         return () => clearInterval(interval)
     })
 
+    //Go back home depuis logo
+    const history = useHistory()
+
+    const GoBackHome = () => {
+        setScore(0)
+        setAmount(10)
+        setCategory(9)
+        setDifficulty('easy')
+        history.push('/')
+    }
+
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
         yeahPlay.volume = 0.02
@@ -45,7 +57,7 @@ const ScoreContainer = ({
     return (
         <div className="score-page">
             <div className="logo">
-                <img alt="logo" src={logo} />
+                <img alt="logo" src={logo} onClick={GoBackHome} />
             </div>
             <FinalMessage userName={userName} />
             <FinalScore score={score} />
