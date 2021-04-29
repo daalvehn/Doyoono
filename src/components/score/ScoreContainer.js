@@ -29,7 +29,9 @@ const ScoreContainer = ({
             AnimScore()
         }, 1000)
 
-        return () => clearInterval(interval)
+        setTimeout(() => {
+            clearInterval(interval)
+        }, 5000)
     })
 
     const handleAudio = () => {
