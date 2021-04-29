@@ -8,7 +8,7 @@
     justify-content: space-between;
     align-items: center;
     padding-bottom: 4rem;
-    margin: 0 3.5rem;
+    margin: 0 5rem;
 }
 
 @media screen and (max-width: 1265px) {
@@ -21,6 +21,8 @@
     }
 }
 
-@media screen and (max-width: px) {
-
+@media screen and (max-width: 600px) {
+    .quiz-container {
+        padding: 0 2rem;        
+    }
 }

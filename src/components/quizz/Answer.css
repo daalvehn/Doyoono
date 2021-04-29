@@ -2,12 +2,11 @@
     background-color: var(--white);
     border-radius: 0.5rem;
     padding: 0 3rem;
-    margin-top: 2rem;
-    width: 40%;
     font-size: 2.1rem;
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 100%;
 }
 
 .answer-container:hover {
@@ -39,8 +38,8 @@
     }
 }
 
-@media screen and (max-width: 1265px) {
+@media screen and (max-width: 420px) {
     .answer-container {
-        width: 90%;
+        font-size: 1.5rem;
     }
 }
