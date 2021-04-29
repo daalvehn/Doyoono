@@ -7,6 +7,7 @@ import axios from 'axios'
 import music from '../../assets/audio/music.mp3'
 import notif from '../../assets/audio/notif.mp3'
 import logo from '../../assets/images/logo.svg'
+import { useHistory } from 'react-router-dom'
 
 const QuizContainer = ({
     userName,
@@ -17,6 +18,9 @@ const QuizContainer = ({
     setScore,
     difficulty,
     category,
+    setAmount,
+    setCategory,
+    setDifficulty,
 }) => {
     const [index, setIndex] = useState(0)
 
@@ -50,12 +54,23 @@ const QuizContainer = ({
         }
     }, [])
 
+    //Go back home depuis logo
+    const history = useHistory()
+
+    const GoBackHome = () => {
+        setScore(0)
+        setAmount(10)
+        setCategory(9)
+        setDifficulty('easy')
+        history.push('/')
+    }
+
     return (
         <div className="quiz-container">
             <div className="quiz-header">
                 <NameField userName={userName} />
                 <div className="logo">
-                    <img alt="logo" src={logo} />
+                    <img alt="logo" src={logo} onClick={GoBackHome} />
                 </div>
                 <ScoreField score={score} />
             </div>
