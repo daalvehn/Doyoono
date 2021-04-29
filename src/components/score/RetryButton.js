@@ -7,7 +7,7 @@ import notif from '../../assets/audio/notif.mp3'
 
 const RetryButton = ({ setScore, setAmount, setCategory, setDifficulty }) => {
     const [playNotif] = useSound(notif, { volume: 1 })
-    const [playSwoosh] = useSound(swoosh, { volume: 0.1 })
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
 
     const handleOnClick = () => {
         setScore(0)
@@ -21,6 +21,7 @@ const RetryButton = ({ setScore, setAmount, setCategory, setDifficulty }) => {
             className="div-button"
             onClick={handleOnClick}
             onMouseEnter={playSwoosh}
+            onMouseLeave={stopSwoosh}
         >
             <Link to="/">Retry</Link>
         </div>

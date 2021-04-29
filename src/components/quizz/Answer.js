@@ -13,7 +13,7 @@ const Answer = ({
     score,
     NextQuestion,
 }) => {
-    const [playSwoosh] = useSound(swoosh, { volume: 0.05 })
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
     const [playCorrect] = useSound(correct, { volume: 0.2 })
     const [playerAnswerClass, setPlayerAnswerClass] = useState('')
 
@@ -30,12 +30,13 @@ const Answer = ({
 
     return (
         <div
-            className={` ${
+            className={` answer-container ${
                 isAnswersReveal &&
                 (answer === correctAnswer ? 'answer-correct' : 'answer-wrong')
-            } ${playerAnswerClass} answer-container`}
+            } ${playerAnswerClass} `}
             onClick={!isAnswersReveal ? checkAnswer : undefined}
-            onMouseEnter={!isAnswersReveal && playSwoosh}
+            onMouseEnter={!isAnswersReveal ? playSwoosh : undefined}
+            onMouseLeave={stopSwoosh}
         >
             <p dangerouslySetInnerHTML={{ __html: answer }} />
         </div>
