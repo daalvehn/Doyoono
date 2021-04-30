@@ -33,6 +33,30 @@
     min-height: 37.2rem;
 }
 
+.pop-score {
+    position: absolute;
+    color: var(--blue);
+    font-size: 5rem;
+    font-weight: bold;
+    animation-name: pop-score;
+    animation-duration: 3s;
+}
+
+@keyframes pop-score {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+}
+
 @media (max-width: 992px) {
     .wait-container {
         font-size: 5rem;
