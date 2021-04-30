@@ -38,6 +38,8 @@ const ScoreContainer = ({
         setTimeout(() => {
             clearInterval(interval)
         }, 5000)
+
+        return () => clearInterval(interval)
     })
 
     //Go back home depuis logo
