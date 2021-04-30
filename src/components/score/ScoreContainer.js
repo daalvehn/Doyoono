@@ -19,6 +19,8 @@ const ScoreContainer = ({
     setDifficulty,
 }) => {
     const { image, takeScreenshot } = useScreenshot()
+
+    //Animation confettis
     const AnimScore = () => {
         confetti({
             particleCount: 100,
