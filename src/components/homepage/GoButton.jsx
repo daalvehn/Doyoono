@@ -5,7 +5,7 @@ import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
 
 const GoButton = () => {
-    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.2 })
 
     return (
         <div className="cta-btn">
