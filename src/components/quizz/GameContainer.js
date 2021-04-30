@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
+import Timer from './Timer'
 import QuestionCounter from './QuestionCounter'
-import { useHistory } from 'react-router-dom'
 
 const GameContainer = ({
     question,
@@ -34,21 +35,6 @@ const GameContainer = ({
         //On va sur la page du score
         history.push('/score')
     }
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            if (timerRemains > 0) {
-                setTimerRemains(timerRemains - 1)
-                console.log(timerRemains)
-            } else {
-                clearInterval(interval)
-                console.log('Time out !')
-            }
-        }, 1000)
-        return () => {
-            clearInterval(interval)
-        }
-    }, [timerRemains, index])
 
     useEffect(() => {
         randomizeAnswers()
@@ -84,6 +70,11 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
+            <Timer
+                index={index}
+                timerRemains={timerRemains}
+                setTimerRemains={setTimerRemains}
+            />
             <div className="question">
                 <QuestionCounter
                     questionCounter={questionCounter}
