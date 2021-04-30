@@ -4,6 +4,7 @@ import useSound from 'use-sound'
 import swoosh from '../../assets/audio/swoosh.mp3'
 import correct from '../../assets/audio/correct.mp3'
 import wrong from '../../assets/audio/wrong.mp3'
+import confetti from 'canvas-confetti'
 
 const Answer = ({
     answer,
@@ -27,6 +28,19 @@ const Answer = ({
         }
     }, [answer])
 
+    //Animation good answer
+
+    const AnimGoodAnswer = () => {
+        confetti({
+            particleCount: 50,
+            startVelocity: 30,
+            spread: 360,
+            scalar: 1,
+            colors: ['var(--blue)'],
+        })
+    }
+
+    //Fonction globale réponse
     const checkAnswer = (e) => {
         e.preventDefault()
         setIsAnswersReveal(true)
@@ -35,6 +49,7 @@ const Answer = ({
             setPlayerAnswerClass('player-correct')
             setScore(score + 100)
             playCorrect.play()
+            AnimGoodAnswer()
         } else {
             setPlayerAnswerClass('player-wrong')
             playWrong.play()
