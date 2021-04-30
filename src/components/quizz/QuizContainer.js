@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import GameContainer from './GameContainer'
+import GameWaitData from './GameWaitData'
 import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
@@ -90,7 +91,7 @@ const QuizContainer = ({
                     score={score}
                 />
             ) : (
-                'NO DATA'
+                <GameWaitData />
             )}
         </div>
     )

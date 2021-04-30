@@ -23,6 +23,21 @@
     text-align: center;
 }
 
+.wait-container {
+    text-align: center;
+    font-weight: 700;
+    font-size: 10rem;
+    opacity: 0.1;
+    padding: 2rem 3rem;
+    min-width: 1rem;
+    min-height: 37.2rem;
+}
+
+@media (max-width: 992px) {
+    .wait-container {
+        font-size: 5rem;
+    }
+}
 @media screen and (max-width: 1265px) {
     .game-container {
         padding: 2rem;
