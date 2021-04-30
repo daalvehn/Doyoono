@@ -36,27 +36,25 @@ const GameContainer = ({
 
     useEffect(() => {
         const interval = setInterval(() => {
-            setTimerRemains(timerRemains - 1)
-            console.log(timerRemains)
+            if (timerRemains > 0) {
+                setTimerRemains(timerRemains - 1)
+                console.log(timerRemains)
+            } else {
+                clearInterval(interval)
+            }
         }, 1000)
         return () => {
             clearInterval(interval)
         }
-    })
+    }, [timerRemains])
 
-    // const SetTimer = () => {
-    //     // const nowDate = new Date().getTime()
-    //     setTimerRemains(timerRemains - 1)
-    //     console.log(timerRemains)
-    // }
+    useEffect(() => {
+        randomizeAnswers()
+        setQuestionCounter(index + 1)
+        setIsAnswersReveal(false)
 
-    // useEffect(() => {
-    //     randomizeAnswers()
-    //     setQuestionCounter(index + 1)
-    //     setIsAnswersReveal(false)
-
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-    // }, [index])
+        // eslint-disable-next-line react-hooks/exhaustive-deps
+    }, [index])
 
     //Randomize le display des réponses
 
