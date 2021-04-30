@@ -7,6 +7,8 @@ import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
 import confetti from 'canvas-confetti'
 import { useHistory } from 'react-router-dom'
+import { useScreenshot } from 'use-screenshot-hook'
+import ScreenshotButton from './ScreenshotButton'
 
 const ScoreContainer = ({
     userName,
@@ -16,6 +18,7 @@ const ScoreContainer = ({
     setCategory,
     setDifficulty,
 }) => {
+    const { image, takeScreenshot } = useScreenshot()
     const AnimScore = () => {
         confetti({
             particleCount: 100,
@@ -69,6 +72,7 @@ const ScoreContainer = ({
                 setCategory={setCategory}
                 setDifficulty={setDifficulty}
             />
+            <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
         </div>
     )
 }
