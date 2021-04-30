@@ -14,6 +14,7 @@ const Answer = ({
     setScore,
     score,
     NextQuestion,
+    setPopScore,
 }) => {
     const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
     const playWrong = new Audio(wrong)
@@ -25,6 +26,7 @@ const Answer = ({
     useEffect(() => {
         return () => {
             setPlayerAnswerClass('')
+            setPopScore(false)
         }
     }, [answer])
 
@@ -41,6 +43,7 @@ const Answer = ({
     }
 
     //Fonction globale réponse
+
     const checkAnswer = (e) => {
         e.preventDefault()
         setIsAnswersReveal(true)
@@ -48,6 +51,7 @@ const Answer = ({
         if (answer === correctAnswer) {
             setPlayerAnswerClass('player-correct')
             setScore(score + 100)
+            setPopScore(true)
             playCorrect.play()
             AnimGoodAnswer()
         } else {
