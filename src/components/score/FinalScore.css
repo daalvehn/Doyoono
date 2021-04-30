@@ -1,6 +1,7 @@
 .final-score {
     color: var(--purple);
 }
+
 .score {
     font-size: 2.3rem;
     font-weight: bold;
@@ -8,6 +9,7 @@
     vertical-align: center;
     margin: 0;
 }
+
 .score-number {
     position: absolute;
     left: 0;
@@ -27,5 +29,25 @@
 
     to {
         font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .score {
+        font-size: 2rem;
+    }
+
+    .score-number {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .score {
+        font-size: 1.5rem;
+    }
+
+    .score-number {
+        font-size: 4rem;
     }
 }

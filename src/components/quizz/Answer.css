@@ -1,10 +1,12 @@
 .answer-container {
     background-color: var(--white);
-    text-align: center;
     border-radius: 0.5rem;
     padding: 0 3rem;
-    margin-top: 2rem;
-    width: 40%;
+    font-size: 2.1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
 }
 
 .answer-container:hover {
@@ -27,24 +29,11 @@
         0.5s ease-in-out infinite alternate shineColor;
 }
 
-.answer-wrong,
-.answer-wrong:hover {
-    font-weight: 400;
-    background-color: #988;
-    color: white;
-}
-
 .player-wrong,
 .player-wrong:hover {
     font-weight: 500;
     background-color: red;
     color: white;
-}
-
-@media (max-width: 992px) {
-    .answer-container {
-        width: 100%;
-    }
 }
 
 @keyframes shineZoom {
@@ -62,5 +51,11 @@
     }
     to {
         background-color: #adf;
+    }
+}
+
+@media screen and (max-width: 420px) {
+    .answer-container {
+        font-size: 1.5rem;
     }
 }

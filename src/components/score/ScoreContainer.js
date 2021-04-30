@@ -49,6 +49,7 @@ const ScoreContainer = ({
         history.push('/')
     }
 
+    //Animation sonore
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
         yeahPlay.volume = 0.02

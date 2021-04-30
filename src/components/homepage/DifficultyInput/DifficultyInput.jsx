@@ -8,7 +8,7 @@ const radioInputName = 'difficulty'
 
 const DifficultyInput = ({difficulty, setDifficulty, difficultyValues}) => (
     <div className="difficulty-input">
-        <label>Difficulty</label>
+        <label className="label">Difficulty</label>
         <fieldset>
             <RadioInput name={radioInputName} difficultyValue={difficultyValues.easy} setDifficulty={setDifficulty} difficulty={difficulty} />
             <RadioInput name={radioInputName} difficultyValue={difficultyValues.medium} setDifficulty={setDifficulty} difficulty={difficulty} />

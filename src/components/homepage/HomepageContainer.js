@@ -17,34 +17,35 @@ const HomepageContainer = ({
     setCategory,
 }) => {
     return (
-        <div>
+        <div className="homepage-container">
             <div className="logo">
                 <img alt="logo" src={logo} />
             </div>
-            <form>
-                <div className="name-input">
-                    <NameInput userName={userName} setUserName={setUserName} />
+            <div className="homepage-inputs">
+                <div>
+                    <div className="name-input">
+                        <NameInput userName={userName} setUserName={setUserName} />
+                    </div>
+                    <div className="quiz-properties">
+                        <ThemeInput
+                            quizThemes={quizThemes}
+                            setCategory={setCategory}
+                        />
+                        <DifficultyInput
+                            setDifficulty={setDifficulty}
+                            difficulty={difficulty}
+                            difficultyValues={difficultyValues}
+                        />
+                        <NumberOfQuestionsInput
+                            amount={amount}
+                            setAmount={setAmount}
+                        />
+                    </div>
+                    <div className="go-btn">
+                        <GoButton />
+                    </div>
                 </div>
-                <div className="quiz-properties">
-                    <ThemeInput
-                        quizThemes={quizThemes}
-                        setCategory={setCategory}
-                    />
-
-                    <DifficultyInput
-                        setDifficulty={setDifficulty}
-                        difficulty={difficulty}
-                        difficultyValues={difficultyValues}
-                    />
-                    <NumberOfQuestionsInput
-                        amount={amount}
-                        setAmount={setAmount}
-                    />
-                </div>
-                <div className="go-btn">
-                    <GoButton />
-                </div>
-            </form>
+            </div>
         </div>
     )
 }
