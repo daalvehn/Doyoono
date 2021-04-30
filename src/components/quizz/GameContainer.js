@@ -21,6 +21,7 @@ const GameContainer = ({
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
+    const [timerRemains, setTimerRemains] = useState(10)
 
     let history = useHistory()
 
@@ -34,11 +35,28 @@ const GameContainer = ({
     }
 
     useEffect(() => {
-        randomizeAnswers()
-        setQuestionCounter(index + 1)
-        setIsAnswersReveal(false)
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [index])
+        const interval = setInterval(() => {
+            setTimerRemains(timerRemains - 1)
+            console.log(timerRemains)
+        }, 1000)
+        return () => {
+            clearInterval(interval)
+        }
+    })
+
+    // const SetTimer = () => {
+    //     // const nowDate = new Date().getTime()
+    //     setTimerRemains(timerRemains - 1)
+    //     console.log(timerRemains)
+    // }
+
+    // useEffect(() => {
+    //     randomizeAnswers()
+    //     setQuestionCounter(index + 1)
+    //     setIsAnswersReveal(false)
+
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+    // }, [index])
 
     //Randomize le display des réponses
 
