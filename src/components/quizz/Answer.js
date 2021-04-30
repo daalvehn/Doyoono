@@ -14,11 +14,11 @@ const Answer = ({
     score,
     NextQuestion,
 }) => {
-    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.05 })
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.1 })
     const playWrong = new Audio(wrong)
     const playCorrect = new Audio(correct)
-    playWrong.volume = 0.15
-    playCorrect.volume = 0.2
+    playWrong.volume = 0.4
+    playCorrect.volume = 0.6
     const [playerAnswerClass, setPlayerAnswerClass] = useState('')
 
     useEffect(() => {

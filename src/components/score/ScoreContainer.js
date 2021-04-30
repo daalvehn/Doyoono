@@ -56,7 +56,7 @@ const ScoreContainer = ({
     //Animation sonore
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
-        yeahPlay.volume = 0.02
+        yeahPlay.volume = 0.05
         yeahPlay.play()
     }
 
