@@ -18,10 +18,11 @@ const GameContainer = ({
     setScore,
     score,
 }) => {
+    const timerDuration = 10
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
-    const [timerRemains, setTimerRemains] = useState(10)
+    const [timerRemains, setTimerRemains] = useState(timerDuration)
 
     let history = useHistory()
 
@@ -41,17 +42,19 @@ const GameContainer = ({
                 console.log(timerRemains)
             } else {
                 clearInterval(interval)
+                console.log('Time out !')
             }
         }, 1000)
         return () => {
             clearInterval(interval)
         }
-    }, [timerRemains])
+    }, [timerRemains, index])
 
     useEffect(() => {
         randomizeAnswers()
         setQuestionCounter(index + 1)
         setIsAnswersReveal(false)
+        setTimerRemains(timerDuration)
 
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index])
