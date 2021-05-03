@@ -24,6 +24,7 @@ const GameContainer = ({
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
     const [timerRemains, setTimerRemains] = useState(timerDuration)
+    const [popScore, setPopScore] = useState(false)
 
     let history = useHistory()
 
@@ -82,6 +83,7 @@ const GameContainer = ({
                 />
                 <Question question={question} />
             </div>
+            {popScore ? <div className="pop-score">+100</div> : undefined}
             <div className="answers-container">
                 <Answer
                     answer={randomAnswers[0]}
@@ -91,6 +93,7 @@ const GameContainer = ({
                     score={score}
                     setScore={setScore}
                     NextQuestion={NextQuestion}
+                    setPopScore={setPopScore}
                 />
                 <Answer
                     answer={randomAnswers[1]}
@@ -100,6 +103,7 @@ const GameContainer = ({
                     score={score}
                     setScore={setScore}
                     NextQuestion={NextQuestion}
+                    setPopScore={setPopScore}
                 />
                 <Answer
                     answer={randomAnswers[2]}
@@ -109,6 +113,7 @@ const GameContainer = ({
                     score={score}
                     setScore={setScore}
                     NextQuestion={NextQuestion}
+                    setPopScore={setPopScore}
                 />
                 <Answer
                     answer={randomAnswers[3]}
@@ -118,6 +123,7 @@ const GameContainer = ({
                     score={score}
                     setScore={setScore}
                     NextQuestion={NextQuestion}
+                    setPopScore={setPopScore}
                 />
             </div>
         </div>

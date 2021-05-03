@@ -5,3 +5,37 @@
     justify-content: space-between;
     min-height: 600px;
 }
+
+.scr-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 250px;
+}
+
+.scr-btn {
+    color: var(--white);
+    height: 80px;
+    width: 80px;
+    text-transform: uppercase;
+    text-decoration: none;
+    border-radius: 50%;
+    animation: blink 0.7s 2 both;
+    cursor: pointer;
+}
+@keyframes blink {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
+
+.camera-img {
+    margin-top: 45px;
+}

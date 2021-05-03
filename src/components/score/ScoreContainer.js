@@ -7,6 +7,8 @@ import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
 import confetti from 'canvas-confetti'
 import { useHistory } from 'react-router-dom'
+import { useScreenshot } from 'use-screenshot-hook'
+import ScreenshotButton from './ScreenshotButton'
 
 const ScoreContainer = ({
     userName,
@@ -16,6 +18,8 @@ const ScoreContainer = ({
     setCategory,
     setDifficulty,
 }) => {
+    const { image, takeScreenshot } = useScreenshot()
+
     //Animation confettis
     const AnimScore = () => {
         confetti({
@@ -34,6 +38,8 @@ const ScoreContainer = ({
         setTimeout(() => {
             clearInterval(interval)
         }, 5000)
+
+        return () => clearInterval(interval)
     })
 
     //Go back home depuis logo
@@ -50,7 +56,7 @@ const ScoreContainer = ({
     //Animation sonore
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
-        yeahPlay.volume = 0.02
+        yeahPlay.volume = 0.05
         yeahPlay.play()
     }
 
@@ -71,6 +77,7 @@ const ScoreContainer = ({
                 setCategory={setCategory}
                 setDifficulty={setDifficulty}
             />
+            <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
         </div>
     )
 }

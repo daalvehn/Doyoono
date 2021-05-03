@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import GameContainer from './GameContainer'
+import GameWaitData from './GameWaitData'
 import ScoreField from './ScoreField'
 import NameField from './NameField'
 import './QuizContainer.css'
@@ -28,7 +29,7 @@ const QuizContainer = ({
     const notifPlay = new Audio(notif)
 
     const handleSound = () => {
-        musicPlay.volume = 0.01
+        musicPlay.volume = 0.05
         musicPlay.loop = true
         musicPlay.play()
         notifPlay.play()
@@ -90,7 +91,7 @@ const QuizContainer = ({
                     score={score}
                 />
             ) : (
-                'NO DATA'
+                <GameWaitData />
             )}
         </div>
     )
