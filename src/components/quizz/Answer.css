@@ -14,6 +14,12 @@
     background-color: var(--blue);
 }
 
+.answer-wrong,
+.answer-wrong:hover {
+    background-color: #988;
+    color: white;
+}
+
 .answer-correct,
 .answer-correct:hover {
     background-color: green;
