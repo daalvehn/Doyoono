@@ -1,34 +1,18 @@
 .chronometer {
     position: absolute;
+    background-color: var(--blue);
     top: 29rem;
     font-size: 3rem;
-    background-color: var(--blue);
     font-weight: bold;
     color: var(--white);
     border-radius: 50%;
     width: 8rem;
     height: 8rem;
     text-align: center;
-    margin: 0;
-    padding: 0;
-}
-
-.chronometer anim {
-    animation-name: time-counter;
-    animation-duration: 1s;
 }
 
 .chronometer p {
     position: relative;
     top: 2rem;
     margin: 0;
-}
-
-@keyframes time-counter {
-    from {
-    }
-
-    to {
-        background-color: var(--orange);
-    }
 }

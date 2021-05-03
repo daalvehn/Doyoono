@@ -33,14 +33,16 @@ const Answer = ({
             scoreMultiplier = 1
             break
         case 'medium':
-            scoreMultiplier = 2.5
+            scoreMultiplier = 1.5
             break
         case 'hard':
-            scoreMultiplier = 4
+            scoreMultiplier = 2.5
             break
     }
     const scoreFormula =
-        100 + Math.ceil((timerRemains / timerDuration) * 100) * scoreMultiplier
+        // (100 + 100 %tempsRestant) * scoreMultiplier
+        (100 + Math.ceil((timerRemains / timerDuration) * 100)) *
+        scoreMultiplier
 
     useEffect(() => {
         return () => {
