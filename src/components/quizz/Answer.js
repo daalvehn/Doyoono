@@ -23,13 +23,6 @@ const Answer = ({
     playCorrect.volume = 0.6
     const [playerAnswerClass, setPlayerAnswerClass] = useState('')
 
-    useEffect(() => {
-        return () => {
-            setPlayerAnswerClass('')
-            setPopScore(false)
-        }
-    }, [answer])
-
     //Animation good answer
 
     const AnimGoodAnswer = () => {
@@ -58,9 +51,16 @@ const Answer = ({
             setPlayerAnswerClass('player-wrong')
             playWrong.play()
         }
-
         setTimeout(NextQuestion, 2500)
     }
+
+    useEffect(() => {
+        return () => {
+            setPlayerAnswerClass('')
+            setPopScore(false)
+            clearTimeout(checkAnswer)
+        }
+    }, [answer])
 
     return (
         <div
