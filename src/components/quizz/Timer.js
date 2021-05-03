@@ -1,12 +1,13 @@
 import React, { useEffect } from 'react'
 import './Timer.css'
 
-const Chrono = ({ index, timerRemains, setTimerRemains }) => {
+const Chrono = ({ index, timerRemains, setTimerRemains, isAnswersReveal }) => {
     useEffect(() => {
         const interval = setInterval(() => {
             if (timerRemains > 0) {
-                setTimerRemains(timerRemains - 1)
-                console.log(timerRemains)
+                isAnswersReveal
+                    ? clearInterval(interval)
+                    : setTimerRemains(timerRemains - 1)
             } else {
                 clearInterval(interval)
                 console.log('Time out !')
@@ -15,7 +16,7 @@ const Chrono = ({ index, timerRemains, setTimerRemains }) => {
         return () => {
             clearInterval(interval)
         }
-    }, [timerRemains, index])
+    }, [timerRemains, index, isAnswersReveal])
 
     return (
         <div className="chronometer">
