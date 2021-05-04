@@ -12,14 +12,14 @@ const Chrono = ({ index, timerRemains, setTimerRemains, isAnswersReveal }) => {
                 clearInterval(interval)
                 console.log('Time out !')
             }
-        }, 1000)
+        }, 1600)
         return () => {
             clearInterval(interval)
         }
     }, [timerRemains, index, isAnswersReveal])
 
     return (
-        <div className="chronometer">
+        <div className={`chronometer ${isAnswersReveal}`}>
             <p>{timerRemains}</p>
         </div>
     )
