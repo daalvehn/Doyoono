@@ -24,6 +24,7 @@
     animation: blink 0.7s 2 both;
     cursor: pointer;
 }
+
 @keyframes blink {
     0%,
     50%,

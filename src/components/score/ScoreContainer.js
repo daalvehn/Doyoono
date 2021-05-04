@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import React, {useState, useEffect } from 'react'
 import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
@@ -9,6 +9,7 @@ import confetti from 'canvas-confetti'
 import { useHistory } from 'react-router-dom'
 import { useScreenshot } from 'use-screenshot-hook'
 import ScreenshotButton from './ScreenshotButton'
+import ScoreHistory from "./ScoreHistory"
 
 const ScoreContainer = ({
     userName,
@@ -19,6 +20,8 @@ const ScoreContainer = ({
     setDifficulty,
 }) => {
     const { image, takeScreenshot } = useScreenshot()
+    
+    
 
     //Animation confettis
     const AnimScore = () => {
@@ -70,14 +73,18 @@ const ScoreContainer = ({
                 <img alt="logo" src={logo} onClick={GoBackHome} />
             </div>
             <FinalMessage userName={userName} />
-            <FinalScore score={score} />
+            <FinalScore score={score} userName={userName} />
             <RetryButton
                 setScore={setScore}
                 setAmount={setAmount}
                 setCategory={setCategory}
                 setDifficulty={setDifficulty}
+                score={score}
             />
             <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
+            <div className="score-history">
+               <ScoreHistory score={score} userName={userName}/> 
+           </div> 
         </div>
     )
 }
