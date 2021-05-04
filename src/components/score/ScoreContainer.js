@@ -96,7 +96,7 @@ const ScoreContainer = ({
                 setDifficulty={setDifficulty}
             />
             <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
-            <ScoreHistory userName={userName} score={score}/>
+            <ScoreHistory userName={userName} score={score} />
         </div>
     )
 }
