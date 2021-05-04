@@ -2,6 +2,7 @@ import React, { useEffect } from 'react'
 import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
+import ScoreHistory from './ScoreHistory'
 import './ScoreContainer.css'
 import yeah from '../../assets/audio/yeah.mp3'
 import logo from '../../assets/images/logo.svg'
@@ -95,6 +96,7 @@ const ScoreContainer = ({
                 setDifficulty={setDifficulty}
             />
             <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
+            <ScoreHistory userName={userName} score={score}/>
         </div>
     )
 }

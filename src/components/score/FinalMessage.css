@@ -3,7 +3,7 @@
     vertical-align: center;
     font-size: 5rem;
     color: var(--dark-grey);
-    margin: 60px 0;
+    margin: 30px 0;
 }
 
 @media screen and (max-width: 640px) {
