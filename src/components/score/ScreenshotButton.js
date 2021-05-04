@@ -19,7 +19,14 @@ const ScreenshotButton = ({ image, takeScreenshot }) => {
                     onClick={() => takeScreenshot()}
                 />
             </div>
-            {image && <img className="camera-img" width={600} src={image} />}
+            {image && (
+                <img
+                    className="camera-img"
+                    width={600}
+                    src={image}
+                    alt="screenshot"
+                />
+            )}
         </div>
     )
 }

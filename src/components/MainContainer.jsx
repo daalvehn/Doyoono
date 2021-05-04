@@ -11,9 +11,21 @@ const MainContainer = () => {
     const [score, setScore] = useState(0)
     const [userName, setUserName] = useState('Player')
     const [quiz, setQuiz] = useState([])
-    const [amount, setAmount] = useState(3)
+    const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState(9)
     const [difficulty, setDifficulty] = useState('easy')
+
+    const quizThemes = [
+        { theme: 'General Knowledge', themeId: 9 },
+        { theme: 'Movies', themeId: 11 },
+        { theme: 'Music', themeId: 12 },
+        { theme: 'Video Games', themeId: 15 },
+        { theme: 'Science & Nature', themeId: 17 },
+        { theme: 'Science: Computers', themeId: 18 },
+        { theme: 'Geography', themeId: 22 },
+        { theme: 'History', themeId: 23 },
+        { theme: 'Japanese Anime & Manga', themeId: 31 },
+    ]
 
     return (
         <section className="container">
@@ -41,6 +53,7 @@ const MainContainer = () => {
                                 setCategory={setCategory}
                                 amount={amount}
                                 setAmount={setAmount}
+                                quizThemes={quizThemes}
                             />
                         </Route>
                         <Route path="/quiz">
@@ -66,6 +79,9 @@ const MainContainer = () => {
                                 setDifficulty={setDifficulty}
                                 setAmount={setAmount}
                                 setCategory={setCategory}
+                                category={category}
+                                difficulty={difficulty}
+                                quizThemes={quizThemes}
                             />
                         </Route>
                     </Switch>

@@ -29,7 +29,7 @@ const QuizContainer = ({
     const notifPlay = new Audio(notif)
 
     const handleSound = () => {
-        musicPlay.volume = 0.01
+        musicPlay.volume = 0.05
         musicPlay.loop = true
         musicPlay.play()
         notifPlay.play()
@@ -89,6 +89,7 @@ const QuizContainer = ({
                     amount={amount}
                     setScore={setScore}
                     score={score}
+                    difficulty={difficulty}
                 />
             ) : (
                 <GameWaitData />

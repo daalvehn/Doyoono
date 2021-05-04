@@ -1,5 +1,5 @@
 .game-container {
-    max-width: 800px;
+    max-width: 70%;
     background-color: var(--beige);
     border-radius: 2rem;
     padding: 5rem;
@@ -11,7 +11,7 @@
 }
 
 .question {
-    width: auto;
+    width: 100%;
 }
 
 .answers-container {
@@ -30,7 +30,31 @@
     opacity: 0.1;
     padding: 2rem 3rem;
     min-width: 1rem;
-    min-height: 37.2rem;
+    height: 90%;
+}
+
+.pop-score {
+    position: absolute;
+    color: var(--blue);
+    font-size: 5rem;
+    font-weight: bold;
+    animation-name: pop-score;
+    animation-duration: 3s;
+}
+
+@keyframes pop-score {
+    0% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    0% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0.5);
+    }
 }
 
 @media (max-width: 992px) {
@@ -52,9 +76,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .game-container {
-    }
-
     .answers-container {
         width: auto;
     }

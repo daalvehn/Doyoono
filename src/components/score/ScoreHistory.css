@@ -1,4 +1,4 @@
-.score-history {
-    color: var(--purple);
-    font-size: 1.5rem;
+.player-history {
+        text-align: center;
+        color: var(--purple);
 }
