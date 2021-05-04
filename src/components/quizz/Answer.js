@@ -87,9 +87,16 @@ const Answer = ({
             setPlayerAnswerClass('player-wrong')
             playWrong.play()
         }
-
         setTimeout(NextQuestion, 2500)
     }
+
+    useEffect(() => {
+        return () => {
+            setPlayerAnswerClass('')
+            setPopScore(false)
+            clearTimeout(checkAnswer)
+        }
+    }, [answer])
 
     return (
         <div

@@ -15,7 +15,6 @@ html {
     background-color: var(--beige);
     margin: 2rem 0;
     width: 70%;
-    min-height: 900px;
     border-radius: 40px;
     background-color: rgba(var(--light-beige-rgb), 0.9);
     padding-top: 2rem;

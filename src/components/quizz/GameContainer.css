@@ -1,5 +1,5 @@
 .game-container {
-    max-width: 800px;
+    max-width: 70%;
     background-color: var(--beige);
     border-radius: 2rem;
     padding: 5rem;
@@ -30,7 +30,7 @@
     opacity: 0.1;
     padding: 2rem 3rem;
     min-width: 1rem;
-    min-height: 37.2rem;
+    height: 90%;
 }
 
 .pop-score {
@@ -76,9 +76,6 @@
 }
 
 @media screen and (max-width: 420px) {
-    .game-container {
-    }
-
     .answers-container {
         width: auto;
     }
