@@ -1,4 +1,4 @@
-import React, {useState, useEffect } from 'react'
+import React, { useEffect } from 'react'
 import FinalMessage from './FinalMessage'
 import FinalScore from './FinalScore'
 import RetryButton from './RetryButton'
@@ -9,7 +9,6 @@ import confetti from 'canvas-confetti'
 import { useHistory } from 'react-router-dom'
 import { useScreenshot } from 'use-screenshot-hook'
 import ScreenshotButton from './ScreenshotButton'
-import ScoreHistory from "./ScoreHistory"
 
 const ScoreContainer = ({
     userName,
@@ -18,10 +17,11 @@ const ScoreContainer = ({
     setAmount,
     setCategory,
     setDifficulty,
+    category,
+    difficulty,
+    quizThemes,
 }) => {
     const { image, takeScreenshot } = useScreenshot()
-    
-    
 
     //Animation confettis
     const AnimScore = () => {
@@ -59,7 +59,7 @@ const ScoreContainer = ({
     //Animation sonore
     const handleAudio = () => {
         const yeahPlay = new Audio(yeah)
-        yeahPlay.volume = 0.02
+        yeahPlay.volume = 0.05
         yeahPlay.play()
     }
 
@@ -73,18 +73,28 @@ const ScoreContainer = ({
                 <img alt="logo" src={logo} onClick={GoBackHome} />
             </div>
             <FinalMessage userName={userName} />
-            <FinalScore score={score} userName={userName} />
+            <FinalScore score={score} />
+            <div className="quizMode">
+                <p>
+                    in{' '}
+                    <strong>
+                        {
+                            quizThemes.filter((x) => x.themeId === category)[0]
+                                .theme
+                        }
+                    </strong>
+                </p>
+                <p>
+                    difficulty <strong>{difficulty}</strong>
+                </p>
+            </div>
             <RetryButton
                 setScore={setScore}
                 setAmount={setAmount}
                 setCategory={setCategory}
                 setDifficulty={setDifficulty}
-                score={score}
             />
             <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
-            <div className="score-history">
-               <ScoreHistory score={score} userName={userName}/> 
-           </div> 
         </div>
     )
 }
