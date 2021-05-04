@@ -15,6 +15,10 @@ const Answer = ({
     score,
     NextQuestion,
     setPopScore,
+    setPopValue,
+    timerRemains,
+    timerDuration,
+    difficulty,
 }) => {
     const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.1 })
     const playWrong = new Audio(wrong)
@@ -22,6 +26,37 @@ const Answer = ({
     playWrong.volume = 0.4
     playCorrect.volume = 0.6
     const [playerAnswerClass, setPlayerAnswerClass] = useState('')
+
+    let scoreMultiplier = 1
+    switch (difficulty) {
+        default:
+            scoreMultiplier = 1
+            break
+        case 'medium':
+            scoreMultiplier = 1.5
+            break
+        case 'hard':
+            scoreMultiplier = 2.5
+            break
+    }
+    const scoreFormula =
+        // (100 + 100 %tempsRestant) * scoreMultiplier
+        (100 + Math.ceil((timerRemains / timerDuration) * 100)) *
+        scoreMultiplier
+
+    useEffect(() => {
+        return () => {
+            setPlayerAnswerClass('')
+            setPopScore(false)
+        }
+    }, [answer])
+
+    useEffect(() => {
+        if (timerRemains === 0) {
+            setIsAnswersReveal(true)
+            setTimeout(NextQuestion, 2500)
+        }
+    }, [timerRemains])
 
     //Animation good answer
 
@@ -43,7 +78,8 @@ const Answer = ({
 
         if (answer === correctAnswer) {
             setPlayerAnswerClass('player-correct')
-            setScore(score + 100)
+            setPopValue(scoreFormula)
+            setScore(score + scoreFormula)
             setPopScore(true)
             playCorrect.play()
             AnimGoodAnswer()

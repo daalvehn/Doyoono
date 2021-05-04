@@ -23,6 +23,19 @@
     animation: blink 0.7s 2 both;
     cursor: pointer;
 }
+
+.quizMode {
+    position: relative;
+    top: 10rem;
+}
+.quizMode > p {
+    margin: 1rem;
+    text-align: center;
+    vertical-align: center;
+    font-size: 3rem;
+    color: var(--purple);
+}
+
 @keyframes blink {
     0%,
     50%,

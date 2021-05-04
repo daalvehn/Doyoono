@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react'
+import { useHistory } from 'react-router-dom'
 import './GameContainer.css'
 import Question from './Question'
 import Answer from './Answer'
+import Timer from './Timer'
 import QuestionCounter from './QuestionCounter'
-import { useHistory } from 'react-router-dom'
 
 const GameContainer = ({
     question,
@@ -17,11 +18,15 @@ const GameContainer = ({
     amount,
     setScore,
     score,
+    difficulty,
 }) => {
+    const timerDuration = 10
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
+    const [timerRemains, setTimerRemains] = useState(timerDuration)
     const [popScore, setPopScore] = useState(false)
+    const [popValue, setPopValue] = useState(100)
 
     let history = useHistory()
 
@@ -38,6 +43,8 @@ const GameContainer = ({
         randomizeAnswers()
         setQuestionCounter(index + 1)
         setIsAnswersReveal(false)
+        setTimerRemains(timerDuration)
+
         // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [index])
 
@@ -66,6 +73,12 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
+            <Timer
+                index={index}
+                timerRemains={timerRemains}
+                setTimerRemains={setTimerRemains}
+                isAnswersReveal={isAnswersReveal}
+            />
             <div className="question">
                 <QuestionCounter
                     questionCounter={questionCounter}
@@ -73,7 +86,9 @@ const GameContainer = ({
                 />
                 <Question question={question} />
             </div>
-            {popScore ? <div className="pop-score">+100</div> : undefined}
+            {popScore ? (
+                <div className="pop-score">+ {popValue} !</div>
+            ) : undefined}
             <div className="answers-container">
                 <Answer
                     answer={randomAnswers[0]}
@@ -84,6 +99,10 @@ const GameContainer = ({
                     setScore={setScore}
                     NextQuestion={NextQuestion}
                     setPopScore={setPopScore}
+                    setPopValue={setPopValue}
+                    timerRemains={timerRemains}
+                    timerDuration={timerDuration}
+                    difficulty={difficulty}
                 />
                 <Answer
                     answer={randomAnswers[1]}
@@ -94,6 +113,10 @@ const GameContainer = ({
                     setScore={setScore}
                     NextQuestion={NextQuestion}
                     setPopScore={setPopScore}
+                    setPopValue={setPopValue}
+                    timerRemains={timerRemains}
+                    timerDuration={timerDuration}
+                    difficulty={difficulty}
                 />
                 <Answer
                     answer={randomAnswers[2]}
@@ -104,6 +127,10 @@ const GameContainer = ({
                     setScore={setScore}
                     NextQuestion={NextQuestion}
                     setPopScore={setPopScore}
+                    setPopValue={setPopValue}
+                    timerRemains={timerRemains}
+                    timerDuration={timerDuration}
+                    difficulty={difficulty}
                 />
                 <Answer
                     answer={randomAnswers[3]}
@@ -114,6 +141,10 @@ const GameContainer = ({
                     setScore={setScore}
                     NextQuestion={NextQuestion}
                     setPopScore={setPopScore}
+                    setPopValue={setPopValue}
+                    timerRemains={timerRemains}
+                    timerDuration={timerDuration}
+                    difficulty={difficulty}
                 />
             </div>
         </div>

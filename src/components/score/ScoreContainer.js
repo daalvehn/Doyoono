@@ -17,6 +17,9 @@ const ScoreContainer = ({
     setAmount,
     setCategory,
     setDifficulty,
+    category,
+    difficulty,
+    quizThemes,
 }) => {
     const { image, takeScreenshot } = useScreenshot()
 
@@ -71,6 +74,20 @@ const ScoreContainer = ({
             </div>
             <FinalMessage userName={userName} />
             <FinalScore score={score} />
+            <div className="quizMode">
+                <p>
+                    in{' '}
+                    <strong>
+                        {
+                            quizThemes.filter((x) => x.themeId === category)[0]
+                                .theme
+                        }
+                    </strong>
+                </p>
+                <p>
+                    difficulty <strong>{difficulty}</strong>
+                </p>
+            </div>
             <RetryButton
                 setScore={setScore}
                 setAmount={setAmount}

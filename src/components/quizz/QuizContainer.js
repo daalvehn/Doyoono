@@ -89,6 +89,7 @@ const QuizContainer = ({
                     amount={amount}
                     setScore={setScore}
                     score={score}
+                    difficulty={difficulty}
                 />
             ) : (
                 <GameWaitData />
