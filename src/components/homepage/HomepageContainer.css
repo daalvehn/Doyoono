@@ -64,3 +64,39 @@
         margin-top: -1rem;
     }
 }
+/* mediaquery breakpoints => 420 px, 769px, 1024px  */
+
+@media screen and (max-width: 420px) {
+    .homepage-container {
+        max-width: 100%;
+    }
+
+    .homepage-inputs {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .quiz-properties .label {
+        margin-top: 0.5rem;
+    }
+    .radio-button label {
+        font-size: 1.6rem;
+        margin: 0.7rem 0;
+    }
+
+    .go-btn {
+        display: flex;
+        justify-content: center;
+        margin: 1rem 0;
+        margin-top: 1rem;
+    }
+    .logo,
+    .logo img {
+        text-align: center;
+        height: 8rem;
+    }
+    .name-input {
+        margin: 0 1rem 1rem 1rem;
+    }
+}
