@@ -1,12 +1,11 @@
-import React from 'react';
-import "./FinalScore.css"
+import React from 'react'
+import './FinalScore.css'
 
-const FinalScore = () => {
+const FinalScore = ({ score }) => {
     return (
         <div className="final-score">
             <p className="score">Here's your score</p>
-            <p className="score-number">12 679 </p>
-
+            <p className="score-number">{score} </p>
         </div>
     )
 }

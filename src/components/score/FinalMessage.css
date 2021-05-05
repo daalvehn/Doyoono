@@ -2,5 +2,18 @@
     text-align: center;
     vertical-align: center;
     font-size: 5rem;
-    color: var(--dark-grey)
+    color: var(--dark-grey);
+    margin: 30px 0;
+}
+
+@media screen and (max-width: 640px) {
+    .final-message {
+        font-size: 3rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .final-message {
+        font-size: 2.5rem;
+    }
 }

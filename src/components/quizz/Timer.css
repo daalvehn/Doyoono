@@ -1,0 +1,63 @@
+.chronometer {
+    display: flex;
+    border-color: white;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 9rem;
+    width: 9rem;
+    margin-bottom: 0.5rem;
+}
+
+.chronometer.false p {
+    animation: 16s Intensify forwards ease-in-out,
+        1.605s pulse ease-in-out infinite -0.8s;
+}
+
+.chronometer p {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--blue);
+    font-size: 3rem;
+    font-weight: bold;
+    color: var(--white);
+    border-radius: 50%;
+    width: 8rem;
+    height: 8rem;
+    border-color: white;
+    margin: 0;
+    padding: 0.5rem;
+}
+
+@keyframes Intensify {
+    30% {
+        background-color: var(--blue);
+    }
+    50% {
+        background-color: #a2c916;
+    }
+
+    75% {
+        background-color: #ffb224;
+    }
+    90%,
+    100% {
+        background-color: rgb(255, 40, 2);
+    }
+}
+
+@keyframes pulse {
+    0%,
+    30% {
+        padding: 0.5rem;
+    }
+    50% {
+        padding: 0rem;
+    }
+    60%,
+    100% {
+        padding: 0.5rem;
+    }
+}

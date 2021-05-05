@@ -1,19 +1,59 @@
+
+
+
 .final-score {
     color: var(--purple);
+    display: inline-block;
+    
 }
+
 .score {
     font-size: 2.3rem;
     font-weight: bold;
     text-align: center;
     vertical-align: center;
     margin: 0;
-    
-   
 }
+
 .score-number {
-    font-size: 6rem;
+    position: absolute;
+    left: 0;
+    right: 0;
+    font-size: 8rem;
     text-align: center;
-    vertical-align: center;
     margin: 0;
-  
+    animation-duration: 1s;
+    animation-delay: 0s;
+    animation-name: score-scaling;
+    animation-iteration-count: 6;
+}
+
+
+@keyframes score-scaling {
+    from {
+    }
+
+    to {
+        font-size: 10rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .score {
+        font-size: 2rem;
+    }
+
+    .score-number {
+        font-size: 5rem;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    .score {
+        font-size: 1.5rem;
+    }
+
+    .score-number {
+        font-size: 4rem;
+    }
 }

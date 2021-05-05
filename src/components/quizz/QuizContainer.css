@@ -1,9 +1,27 @@
 .quiz-container {
-    min-height: 868px;
+    padding: 0 5rem;
 }
 
 .quiz-header {
     display: flex;
     justify-content: space-between;
-    padding: 0 2rem 4rem 2rem;
+    align-items: center;
+    padding-bottom: 4rem;
+    margin: 0 5rem;
+}
+
+@media screen and (max-width: 1265px) {
+    .quiz-header {
+        flex-direction: column;
+    }
+
+    .logo {
+        order: -1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .quiz-container {
+        padding: 0 2rem;
+    }
 }

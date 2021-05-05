@@ -1,11 +1,21 @@
-import React from 'react';
-import './GoButton.css';
-import {BrowserRouter as Router, Switch, Route, Link} from 'react-router-dom'
+import React from 'react'
+import './GoButton.css'
+import { Link } from 'react-router-dom'
+import useSound from 'use-sound'
+import swoosh from '../../assets/audio/swoosh.mp3'
 
 const GoButton = () => {
+    const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.2 })
+
     return (
         <div className="cta-btn">
-          <Link to="/quiz">go!</Link>
+            <Link
+                onMouseEnter={playSwoosh}
+                onMouseLeave={stopSwoosh}
+                to="/quiz"
+            >
+                go!
+            </Link>
         </div>
     )
 }

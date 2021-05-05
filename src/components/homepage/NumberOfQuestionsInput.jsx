@@ -12,29 +12,11 @@ const NumberOfQuestionsInput = ({ amount, setAmount }) => {
                 value={amount}
                 onChange={(e) => setAmount(e.target.value)}
             >
-                <option selected="selected" value="10">
-                    10
-                </option>
+                <option defaultValue="10">10</option>
                 <option value="20">20</option>
                 <option value="30">30</option>
             </select>
         </div>
-        // <div>
-        //     <div className="label" htmlFor="number-of-question">
-        //         Number of Questions
-        //     </div>
-        //     <div className="nbr-qstn">
-        //         <p className="nbr">10</p>
-        //         <div className="increase-decrease-btn">
-        //             <div className="increase-btn">
-        //                 <a></a>
-        //             </div>
-        //             <div className="decrease-btn">
-        //                 <a></a>
-        //             </div>
-        //         </div>
-        //     </div>
-        // </div>
     )
 }
 

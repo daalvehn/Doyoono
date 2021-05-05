@@ -1,7 +1,22 @@
+.logo {
+    text-align: center;
+}
+
+.homepage-container {
+    max-width: 100%;
+}
+
+.homepage-inputs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 6rem;
+}
+
 .quiz-properties {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start;
+    margin: 0 1rem;
 }
 
 .quiz-properties .label {
@@ -21,5 +36,31 @@
 }
 
 .name-input {
-    margin-bottom: 4rem;
+    margin: 0 1rem 4rem 1rem;
+}
+
+@media screen and (max-width: 1100px) {
+    .quiz-properties {
+        display: flex;
+        flex-direction: column;
+        margin: 0 1rem 0 1rem;
+    }
+
+    .quiz-properties .label {
+        margin-top: 4rem;
+    }
+
+    .go-btn {
+        margin-top: 6rem;
+    }
+
+    .logo,
+    .logo img {
+        text-align: center;
+        height: 10rem;
+    }
+
+    .homepage-inputs {
+        margin-top: -1rem;
+    }
 }
