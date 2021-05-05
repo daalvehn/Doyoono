@@ -1,4 +1,16 @@
-.player-history {
-        text-align: center;
-        color: var(--purple);
+.hst {
+    display: inline-block;
+    justify-content: space-between;
+    color: var(--purple);
+}
+
+ul li {
+    color: var(--purple);
+    font-weight: bold;
+}
+
+.medaille {
+    height: 60px;
+    width: 100px;
+    border-radius: 5px;
 }

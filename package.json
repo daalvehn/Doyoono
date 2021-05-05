@@ -16,6 +16,7 @@
     "use-screenshot-hook": "^1.0.2",
     "use-sound": "^2.0.2",
     "web-vitals": "^1.1.1"
+    
   },
   "scripts": {
     "start": "react-scripts start",
@@ -41,4 +42,5 @@
       "last 1 safari version"
     ]
   }
+
 }
