@@ -28,7 +28,7 @@ const MainContainer = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <Router>
                 <ul className="nav">
                     <li>
@@ -90,7 +90,7 @@ const MainContainer = () => {
                     </footer>
                 </div>
             </Router>
-        </section>
+        </div>
     )
 }
 export default MainContainer

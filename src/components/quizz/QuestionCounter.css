@@ -3,13 +3,19 @@
     color: var(--white);
     text-align: center;
     width: 7rem;
-    padding: 0.5rem 0;
+    height: 3rem;
+    padding-top: 1.5rem;
     font-size: 1.5rem;
     border-radius: 2rem 2rem 0 0;
 }
 
+.question-counter p {
+    margin: 0;
+}
+
 @media screen and (max-width: 420px) {
     .question-counter {
-        width: auto;
+        width: 5rem;
+        font-size: 1.2rem;
     }
 }
