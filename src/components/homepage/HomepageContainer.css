@@ -53,4 +53,14 @@
     .go-btn {
         margin-top: 6rem;
     }
+
+    .logo,
+    .logo img {
+        text-align: center;
+        height: 10rem;
+    }
+
+    .homepage-inputs {
+        margin-top: -1rem;
+    }
 }

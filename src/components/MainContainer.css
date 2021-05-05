@@ -33,3 +33,36 @@ footer {
 #blockColorblindContent {
     display: none;
 }
+
+/*Gestion du responsive */
+
+@media screen and (max-width: 768px) {
+    .main-container {
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        border-radius: 0;
+    }
+
+    footer {
+        border-radius: 0;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+    .main-container {
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+    .main-container {
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 1280px) {
+    .main-container {
+        width: 80%;
+    }
+}
