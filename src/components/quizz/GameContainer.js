@@ -73,17 +73,20 @@ const GameContainer = ({
 
     return (
         <div className="game-container">
-            <Timer
-                index={index}
-                timerRemains={timerRemains}
-                setTimerRemains={setTimerRemains}
-                isAnswersReveal={isAnswersReveal}
-            />
             <div className="question">
-                <QuestionCounter
-                    questionCounter={questionCounter}
-                    amount={amount}
-                />
+                <div className="question-info">
+                    <QuestionCounter
+                        questionCounter={questionCounter}
+                        amount={amount}
+                    />
+                    <Timer
+                        index={index}
+                        timerRemains={timerRemains}
+                        setTimerRemains={setTimerRemains}
+                        isAnswersReveal={isAnswersReveal}
+                    />
+                    <div className="empty"></div>
+                </div>
                 <Question question={question} />
             </div>
             {popScore ? (
