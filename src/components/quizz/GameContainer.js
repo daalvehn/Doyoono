@@ -91,11 +91,11 @@ const GameContainer = ({
 
                 <div className="empty"></div>
             </div>
-            <Question question={question} />
-
             {popScore ? (
                 <div className="pop-score">+ {popValue} !</div>
             ) : undefined}
+            <Question question={question} />
+
             <div className="answers-container">
                 <Answer
                     answer={randomAnswers[0]}
