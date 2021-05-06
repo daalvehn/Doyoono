@@ -74,7 +74,7 @@
         margin: 0;
         width: 95%;
         border-radius: 0;
-        padding: 1rem;
+        padding: 1rem 0.5rem;
     }
     .answers-container {
         grid-template-columns: 1fr;
@@ -97,6 +97,7 @@
     .answers-container {
         grid-template-columns: 1fr;
         width: 100%;
+        justify-self: center;
     }
 
     .pop-score {

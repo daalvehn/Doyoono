@@ -32,9 +32,11 @@
     animation: blink 0.7s 2 both;
     cursor: pointer;
 }
+
 .quizMode {
     display: none;
 }
+
 .quizMode > p {
     margin: 1rem;
     text-align: center;
@@ -100,4 +102,28 @@
         width: 100%;
         margin: 4rem;
     }
+}
+
+/*Gestion du responsive */
+
+@media screen and (max-width: 420px) {
+    .quizMode > p {
+        font-size: 2rem;
+    }
+
+    .scr-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+@media screen and (min-width: 1280px) {
 }

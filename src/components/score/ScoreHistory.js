@@ -16,8 +16,8 @@ const ScoreHistory = ({ score, userName }) => {
     }, [])
 
     return (
-        <div className="hst">
-            <GiMedal className="medaille"/>
+        <div className="history-container">
+            <p className="player-history">{userName}'s 3 best games</p>
             <ul>
                 {scoreArray.map(
                     (score, index) => score && <li key={index}>{score} points! </li>

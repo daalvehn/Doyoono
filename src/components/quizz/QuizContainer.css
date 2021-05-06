@@ -18,7 +18,7 @@
         padding: 0;
     }
     .quiz-header {
-        margin: 0 1rem;
+        margin: 0 1rem 2rem 1rem;
     }
     .logo img {
         width: 10rem;
@@ -30,12 +30,16 @@
         padding: 0;
     }
     .quiz-header {
-        margin: 0 1rem;
+        margin: 0 1rem 2rem 1rem;
     }
 }
 
-@media screen and (min-width: 769px) {
+@media screen and (min-width: 769px) and (max-width: 1024px) {
     .quiz-container {
         padding: 0 5rem;
+    }
+
+    .quiz-header {
+        margin: 0 1rem 12vh 1rem;
     }
 }
