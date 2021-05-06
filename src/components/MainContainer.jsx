@@ -3,9 +3,11 @@ import { useState } from 'react'
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
 
 import './MainContainer.css'
+import './footer/modal.css'
 import HomepageContainer from './homepage/HomepageContainer'
 import ScoreContainer from './score/ScoreContainer'
 import QuizContainer from './quizz/QuizContainer'
+import Footer from './footer/Footer'
 
 const MainContainer = () => {
     const [score, setScore] = useState(0)
@@ -30,17 +32,6 @@ const MainContainer = () => {
     return (
         <section className="container">
             <Router>
-                <ul className="nav">
-                    <li>
-                        <Link to="/">Homepage</Link>
-                    </li>
-                    <li>
-                        <Link to="/quiz">Quiz</Link>
-                    </li>
-                    <li>
-                        <Link to="/score">Score</Link>
-                    </li>
-                </ul>
                 <div className="main-container">
                     <Switch>
                         <Route exact path="/">
@@ -85,9 +76,7 @@ const MainContainer = () => {
                             />
                         </Route>
                     </Switch>
-                    <footer>
-                        <p>Ressources / Crédits</p>
-                    </footer>
+                    <Footer />
                 </div>
             </Router>
         </section>
