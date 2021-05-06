@@ -74,20 +74,24 @@ const ScoreContainer = ({
                 <img alt="logo" src={logo} onClick={GoBackHome} />
             </div>
             <FinalMessage userName={userName} />
-            <FinalScore score={score} />
-            <div className="quizMode">
-                <p>
-                    in{' '}
-                    <strong>
-                        {
-                            quizThemes.filter((x) => x.themeId === category)[0]
-                                .theme
-                        }
-                    </strong>
-                </p>
-                <p>
-                    difficulty <strong>{difficulty}</strong>
-                </p>
+            <div className="user-score">
+                <FinalScore score={score} />
+
+                <div className="quizMode">
+                    <p>
+                        in{' '}
+                        <strong>
+                            {
+                                quizThemes.filter(
+                                    (x) => x.themeId === category
+                                )[0].theme
+                            }
+                        </strong>
+                    </p>
+                    <p>
+                        difficulty <strong>{difficulty}</strong>
+                    </p>
+                </div>
             </div>
             <div></div>
             <RetryButton
