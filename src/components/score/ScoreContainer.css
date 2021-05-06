@@ -33,10 +33,6 @@
     cursor: pointer;
 }
 
-.quizMode {
-    display: none;
-}
-
 .quizMode > p {
     margin: 1rem;
     text-align: center;
@@ -47,61 +43,6 @@
 
 .camera-img {
     margin-top: 45px;
-}
-
-@media screen and (min-width: 100px) and (max-width: 419.95px) {
-    .scr-history {
-        display: none;
-    }
-
-    .btm-score {
-        text-align: center;
-    }
-}
-
-@media screen and (min-width: 420px) and (max-width: 768.95px) {
-    .btm-score {
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        margin-top: 2rem;
-    }
-    .retry-scr {
-        justify-content: space-between;
-        width: 100%;
-        margin: 4rem;
-    }
-}
-
-@media screen and (min-width: 769px) and (max-width: 1023.95px) {
-    .btm-score {
-        width: 90%;
-        display: flex;
-        justify-content: space-evenly;
-        flex-direction: row-reverse;
-        margin-top: 2rem;
-    }
-    .retry-scr {
-        justify-content: space-between;
-        width: 100%;
-        margin: 4rem;
-    }
-}
-
-@media screen and (min-width: 1024px) {
-    .btm-score {
-        width: 80%;
-        display: flex;
-        justify-content: space-between;
-        flex-direction: row-reverse;
-        margin-top: 3rem;
-    }
-    .retry-scr {
-        justify-content: space-around;
-        width: 100%;
-        margin: 4rem;
-    }
 }
 
 /*Gestion du responsive */
