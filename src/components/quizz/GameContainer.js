@@ -20,7 +20,7 @@ const GameContainer = ({
     score,
     difficulty,
 }) => {
-    const timerDuration = 10
+    const timerDuration = 20
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])

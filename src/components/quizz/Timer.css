@@ -11,8 +11,8 @@
 }
 
 .chronometer.false p {
-    animation: 16s Intensify forwards ease-in-out,
-        1.605s pulse ease-in-out infinite -0.8s;
+    animation: 20s Intensify forwards ease-in-out,
+        1.005s pulse ease-in-out infinite -0.5s;
 }
 
 .chronometer p {
