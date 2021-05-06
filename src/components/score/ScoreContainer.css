@@ -51,6 +51,13 @@
     align-items: center;
 }
 
+.camera-img img:hover {
+    opacity: 0.7;
+    border: solid 2px var(--purple);
+    margin: -2px;
+    border-radius: 5px;
+}
+
 /*Gestion du responsive */
 
 @media screen and (max-width: 420px) {
