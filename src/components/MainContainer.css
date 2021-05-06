@@ -68,9 +68,3 @@ footer {
         width: 80%;
     }
 }
-
-@media screen and (max-width: 420px) {
-    .main-container {
-        width: 100%;
-    }
-}

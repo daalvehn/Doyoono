@@ -9,14 +9,14 @@ const ScoreHistory = ({ score, userName }) => {
 
     useEffect(() => {
         scoreArray.sort((a, b) => b - a)
-        scoreArray.length = 4
+        scoreArray.length = 2
         localStorage.setItem('myScore', `${score},${scoreArray.toString()}`)
         return () => {}
     }, [])
 
     return (
-        <div>
-            <p className="player-history">{userName}'s 5 best games</p>
+        <div className="history-container">
+            <p className="player-history">{userName}'s 3 best games</p>
             <ul>
                 {scoreArray.map(
                     (score, index) => score && <li key={index}>{score}</li>
