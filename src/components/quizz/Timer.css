@@ -61,3 +61,18 @@
         padding: 0.5rem;
     }
 }
+
+/*Gestion du responsive */
+
+@media screen and (max-width: 420px) {
+    .chronometer {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .chronometer p {
+        font-size: 2rem;
+        width: 4rem;
+        height: 4rem;
+    }
+}

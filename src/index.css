@@ -1,9 +1,10 @@
-body{
-    margin: 0
+body {
+    margin: 0;
+    padding: 0;
 }
 
 html {
-    background-image: url("./assets/images/background.png");
+    background-image: url('./assets/images/background.png');
     background-size: cover;
     font-family: 'Montserrat', sans-serif;
     --blue: #71ccff;
@@ -11,12 +12,13 @@ html {
     --orange: #ff7e46;
     --dark-grey: #404040;
     --light-beige: #fff6f2;
-    --light-beige-rgb:  255, 246, 242;
+    --light-beige-rgb: 255, 246, 242;
     --beige: #ffe9d0;
     --beige-rgb: 255, 233, 208;
     --light-orange: #ffa979;
     --white: #fff;
     color: var(--dark-grey);
     font-size: 62.5%;
+    margin: 0;
+    padding: 0;
 }
-

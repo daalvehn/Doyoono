@@ -1,15 +1,21 @@
 .question-counter {
-    background-color: var(--blue);
-    color: var(--white);
+    background-color: var(--white);
+    color: var(--blue);
+    font-weight: bold;
     text-align: center;
     width: 7rem;
-    padding: 0.5rem 0;
+    padding: 0.5rem;
     font-size: 1.5rem;
-    border-radius: 2rem 2rem 0 0;
+    border-radius: 0.5rem 0.5rem 0 0;
+}
+
+.question-counter p {
+    margin: 0;
 }
 
 @media screen and (max-width: 420px) {
     .question-counter {
-        width: auto;
+        width: 5rem;
+        font-size: 1.2rem;
     }
 }

@@ -30,7 +30,7 @@ const MainContainer = () => {
     ]
 
     return (
-        <section className="container">
+        <div className="container">
             <Router>
                 <div className="main-container">
                     <Switch>
@@ -79,7 +79,7 @@ const MainContainer = () => {
                     <Footer />
                 </div>
             </Router>
-        </section>
+        </div>
     )
 }
 export default MainContainer
