@@ -21,9 +21,9 @@ const ScreenshotButton = ({ image, takeScreenshot }) => {
             </div>
             {image && (
                 <div className="camera-img">
-                    <h2>click below to save your score</h2>
+                    <h2>click below or "save as" to keep your score</h2>
 
-                    <a target="blank" href={image}>
+                    <a target="_blank" href={image}>
                         <img src={image} height={120} alt="screenshot"></img>
                     </a>
                 </div>
