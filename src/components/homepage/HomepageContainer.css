@@ -103,11 +103,13 @@
         height: 8rem;
     }
     .go-btn {
-        display: flex;
-        justify-content: center;
-        margin: 4rem 0;
+        margin: 2.5rem 0;
     }
     .name-input {
-        margin: 0 1rem 5rem 1rem;
+        margin: 0 1rem 2.5rem 1rem;
+    }
+
+    .quiz-properties .label {
+        margin: 0.5rem;
     }
 }
