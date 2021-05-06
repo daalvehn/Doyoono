@@ -1,5 +1,6 @@
 import React, { useEffect } from 'react'
 import './ScoreHistory.css'
+import {GiMedal} from  'react-icons/gi';
 
 const ScoreHistory = ({ score, userName }) => {
     const fromStorage = localStorage.getItem('myScore') || ''
@@ -19,7 +20,7 @@ const ScoreHistory = ({ score, userName }) => {
             <p className="player-history">{userName}'s 3 best games</p>
             <ul>
                 {scoreArray.map(
-                    (score, index) => score && <li key={index}>{score}</li>
+                    (score, index) => score && <li key={index}>{score} points! </li>
                 )}
             </ul>
         </div>
