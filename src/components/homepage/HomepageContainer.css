@@ -64,3 +64,52 @@
         margin-top: -1rem;
     }
 }
+
+@media screen and (max-width: 769px) {
+    .quiz-properties {
+        height: auto;
+    }
+
+    .quiz-properties .label {
+        margin-top: 1.5rem;
+        height: auto;
+    }
+    .radio-button label {
+        font-size: 1.6rem;
+        margin: 0.5rem 0;
+    }
+
+    .go-btn {
+        display: flex;
+        justify-content: center;
+        margin-top: 4rem;
+    }
+    .logo,
+    .logo img {
+        text-align: center;
+        height: 8rem;
+    }
+    .name-input {
+        margin: 0 1rem 2rem 1rem;
+    }
+}
+
+/* mediaquery breakpoints => 420 px, 769px, 1024px  */
+
+@media screen and (max-width: 420px) {
+    .logo,
+    .logo img {
+        text-align: center;
+        height: 8rem;
+    }
+    .go-btn {
+        margin: 2.5rem 0;
+    }
+    .name-input {
+        margin: 0 1rem 2.5rem 1rem;
+    }
+
+    .quiz-properties .label {
+        margin: 0.5rem;
+    }
+}

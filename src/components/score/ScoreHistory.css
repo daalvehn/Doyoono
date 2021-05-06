@@ -1,4 +1,10 @@
+
 .player-history {
-        text-align: center;
-        color: var(--purple);
+    text-align: center;
+    color: var(--purple);
 }
+
+.history-container li {
+    display: inline-block;
+    color: var(--purple);
+    font-weight: bold;

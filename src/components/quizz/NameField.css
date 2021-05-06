@@ -4,4 +4,11 @@
     text-align: center;
     text-transform: uppercase;
     color: var(--orange);
+    width: 15rem;
+}
+
+@media screen and (max-width: 1024px) {
+    .name-field {
+        display: none;
+    }
 }

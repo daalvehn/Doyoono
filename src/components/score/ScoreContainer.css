@@ -1,18 +1,27 @@
+@keyframes blink {
+    0%,
+    50%,
+    100% {
+        opacity: 1;
+    }
+    25%,
+    75% {
+        opacity: 0;
+    }
+}
 .score-page {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    height: 100%;
+    width: 100%;
 }
-
 .scr-container {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 30%;
-    margin: 30px 0;
 }
-
 .scr-btn {
     color: var(--white);
     height: 80px;
@@ -25,9 +34,9 @@
 }
 
 .quizMode {
-    position: relative;
-    top: 10rem;
+    display: none;
 }
+
 .quizMode > p {
     margin: 1rem;
     text-align: center;
@@ -36,18 +45,85 @@
     color: var(--purple);
 }
 
-@keyframes blink {
-    0%,
-    50%,
-    100% {
-        opacity: 1;
+.camera-img {
+    margin-top: 45px;
+}
+
+@media screen and (min-width: 100px) and (max-width: 419.95px) {
+    .scr-history {
+        display: none;
     }
-    25%,
-    75% {
-        opacity: 0;
+
+    .btm-score {
+        text-align: center;
     }
 }
 
-.camera-img {
-    margin-top: 45px;
+@media screen and (min-width: 420px) and (max-width: 768.95px) {
+    .btm-score {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+    }
+    .retry-scr {
+        justify-content: space-between;
+        width: 100%;
+        margin: 4rem;
+    }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023.95px) {
+    .btm-score {
+        width: 90%;
+        display: flex;
+        justify-content: space-evenly;
+        flex-direction: row-reverse;
+        margin-top: 2rem;
+    }
+    .retry-scr {
+        justify-content: space-between;
+        width: 100%;
+        margin: 4rem;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .btm-score {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row-reverse;
+        margin-top: 3rem;
+    }
+    .retry-scr {
+        justify-content: space-around;
+        width: 100%;
+        margin: 4rem;
+    }
+}
+
+/*Gestion du responsive */
+
+@media screen and (max-width: 420px) {
+    .quizMode > p {
+        font-size: 2rem;
+    }
+
+    .scr-container {
+        display: none;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+@media screen and (min-width: 1280px) {
 }

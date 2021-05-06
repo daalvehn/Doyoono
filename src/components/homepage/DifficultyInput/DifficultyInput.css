@@ -21,7 +21,7 @@
     margin-top: 0;
 }
 
-.difficulty-input fieldset{
+.difficulty-input fieldset {
     display: flex;
     border: none;
 }
@@ -50,15 +50,34 @@
 
 .difficulty-input input:hover,
 .difficulty-input input:active {
-    
     background-color: #eef;
     outline: none;
 }
 
 .difficulty-input input:checked {
-    
     border: 10px solid white;
     background-color: var(--blue);
     cursor: pointer;
     outline: none;
+}
+
+@media screen and (max-width: 420px) {
+    .difficulty-input {
+        margin: 0rem 2rem 2rem 2rem;
+    }
+
+    .difficulty-input fieldset {
+        padding: 0;
+    }
+}
+@media screen and (min-width: 421px) and (max-width: 768px) {
+}
+
+@media screen and (min-width: 769px) and (max-width: 1023px) {
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1279px) {
+}
+
+@media screen and (min-width: 1280px) {
 }

@@ -26,3 +26,9 @@
 ::-webkit-input-placeholder {
     text-align: center;
 }
+
+@media screen and (max-width: 420px) {
+    .form-container {
+        font-size: 1.2rem;
+    }
+}

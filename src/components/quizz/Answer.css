@@ -11,7 +11,7 @@
 
 .answer-container:hover {
     cursor: pointer;
-    background-color: var(--blue);
+    background-color: #c8edff;
 }
 
 .answer-wrong,
@@ -22,7 +22,7 @@
 
 .answer-correct,
 .answer-correct:hover {
-    background-color: green;
+    background-color: rgb(144, 216, 144);
     color: white;
     animation: none;
     font-weight: 700;
@@ -38,7 +38,7 @@
 .player-wrong,
 .player-wrong:hover {
     font-weight: 500;
-    background-color: red;
+    background-color: rgb(204, 126, 126);
     color: white;
 }
 
@@ -63,5 +63,11 @@
 @media screen and (max-width: 420px) {
     .answer-container {
         font-size: 1.5rem;
+    }
+}
+
+@media screen and (min-width: 421px) and (max-width: 768px) {
+    .answer-container {
+        margin: 0 1rem;
     }
 }
