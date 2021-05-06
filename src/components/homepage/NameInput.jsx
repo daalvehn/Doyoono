@@ -6,6 +6,7 @@ const NameInput = ({ userName, setUserName }) => {
         <div className="form-container">
             <h1>Enter Your User Name</h1>
             <input
+                placeholder="Player"
                 className="user-name"
                 type="text"
                 value={userName}
