@@ -74,7 +74,7 @@ const GameContainer = ({
     return (
         <div className="game-container">
             <div className="question-info">
-                <div>
+                <div className="counter-container">
                     <QuestionCounter
                         questionCounter={questionCounter}
                         amount={amount}
@@ -89,11 +89,13 @@ const GameContainer = ({
                     />
                 </div>
 
-                <div className="empty"></div>
+                <div className="empty">
+                    {popScore ? (
+                        <div className="pop-score">+ {popValue}</div>
+                    ) : undefined}
+                </div>
             </div>
-            {popScore ? (
-                <div className="pop-score">+ {popValue} !</div>
-            ) : undefined}
+
             <Question question={question} />
 
             <div className="answers-container">
