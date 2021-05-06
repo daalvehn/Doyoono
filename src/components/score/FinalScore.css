@@ -1,10 +1,6 @@
-
-
-
 .final-score {
     color: var(--purple);
     display: inline-block;
-    
 }
 
 .score {
@@ -27,7 +23,6 @@
     animation-name: score-scaling;
     animation-iteration-count: 6;
 }
-
 
 @keyframes score-scaling {
     from {
