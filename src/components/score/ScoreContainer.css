@@ -23,6 +23,9 @@
     align-items: center;
     height: 15rem;
 }
+.scr-container a {
+    cursor: pointer;
+}
 .scr-btn {
     color: var(--white);
     height: 80px;
