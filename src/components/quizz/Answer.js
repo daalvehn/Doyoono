@@ -49,6 +49,7 @@ const Answer = ({
             setPlayerAnswerClass('')
             setPopScore(false)
         }
+        // eslint-disable-next-line
     }, [answer])
 
     useEffect(() => {
@@ -56,6 +57,7 @@ const Answer = ({
             setIsAnswersReveal(true)
             setTimeout(NextQuestion, 2500)
         }
+        // eslint-disable-next-line
     }, [timerRemains])
 
     //Animation good answer
@@ -96,6 +98,7 @@ const Answer = ({
             setPopScore(false)
             clearTimeout(checkAnswer)
         }
+        // eslint-disable-next-line
     }, [answer])
 
     return (

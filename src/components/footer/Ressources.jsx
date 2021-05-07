@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 
 const Ressources = () => {
     const [display, setDisplay] = useState(false)
-    const handleClick = () => {
-        setDisplay(!display)
-    }
+
     return (
         <div>
             <button onClick={() => setDisplay(!display)}>Ressources</button>
@@ -18,6 +16,7 @@ const Ressources = () => {
                                 <a
                                     href="https://www.wavecont.com/free-download"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     wavecont.com
                                 </a>
@@ -27,6 +26,7 @@ const Ressources = () => {
                                 <a
                                     href="https://www.soundeffectsplus.com/"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     soundeffectsplus.com
                                 </a>
@@ -36,6 +36,7 @@ const Ressources = () => {
                                 <a
                                     href="https://fr.freepik.com/"
                                     target="_blank"
+                                    rel="noreferrer"
                                 >
                                     freepik.com
                                 </a>

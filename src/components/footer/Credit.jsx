@@ -2,9 +2,7 @@ import React, { useState } from 'react'
 
 const Credits = () => {
     const [display, setDisplay] = useState(false)
-    const handleClick = () => {
-        setDisplay(!display)
-    }
+
     return (
         <div>
             <button onClick={() => setDisplay(!display)}>Credits</button>

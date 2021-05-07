@@ -16,6 +16,7 @@ const Chrono = ({ index, timerRemains, setTimerRemains, isAnswersReveal }) => {
         return () => {
             clearInterval(interval)
         }
+        // eslint-disable-next-line
     }, [timerRemains, index, isAnswersReveal])
 
     return (

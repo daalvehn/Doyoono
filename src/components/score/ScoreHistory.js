@@ -1,18 +1,16 @@
 import React, { useEffect } from 'react'
 import './ScoreHistory.css'
-import { GiMedal } from 'react-icons/gi'
 
 const ScoreHistory = ({ score, userName }) => {
     const fromStorage = localStorage.getItem('myScore') || ''
     const scoreArray = fromStorage.split(',')
-    console.log('to string :')
-    console.log(scoreArray)
 
     useEffect(() => {
         scoreArray.sort((a, b) => b - a)
         scoreArray.length = 2
         localStorage.setItem('myScore', `${score},${scoreArray.toString()}`)
         return () => {}
+        // eslint-disable-next-line
     }, [])
 
     return (
