@@ -16,7 +16,7 @@ const ScoreHistory = ({ score, userName }) => {
     return (
         <div className="history-container">
             <p className="player-history">
-                {userName === '' ? 'Player' : userName}'s 3 best games
+                {userName === '' ? 'Player' : userName}'s 3 last games
             </p>
             <ul>
                 {scoreArray.map(
