@@ -8,15 +8,14 @@ const GoButton = () => {
     const [playSwoosh, { stopSwoosh }] = useSound(swoosh, { volume: 0.2 })
 
     return (
-        <div className="cta-btn">
-            <Link
-                onMouseEnter={playSwoosh}
-                onMouseLeave={stopSwoosh}
-                to="/quiz"
-            >
-                go!
-            </Link>
-        </div>
+        <Link
+            onMouseEnter={playSwoosh}
+            onMouseLeave={stopSwoosh}
+            to="/quiz"
+            className="cta-btn"
+        >
+            go!
+        </Link>
     )
 }
 
