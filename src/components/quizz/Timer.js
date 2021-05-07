@@ -12,10 +12,11 @@ const Chrono = ({ index, timerRemains, setTimerRemains, isAnswersReveal }) => {
                 clearInterval(interval)
                 console.log('Time out !')
             }
-        }, 1600)
+        }, 1000)
         return () => {
             clearInterval(interval)
         }
+        // eslint-disable-next-line
     }, [timerRemains, index, isAnswersReveal])
 
     return (

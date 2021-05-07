@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React from 'react'
 import Ressources from './Ressources'
 import Credit from './Credit'
 

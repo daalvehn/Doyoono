@@ -21,6 +21,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    height: 15rem;
+}
+.scr-container a {
+    cursor: pointer;
 }
 .scr-btn {
     color: var(--white);
@@ -41,8 +45,21 @@
     color: var(--purple);
 }
 
+.camera-img h2 {
+    margin: 0;
+    color: #696969;
+}
 .camera-img {
-    margin-top: 45px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.camera-img img:hover {
+    opacity: 0.7;
+    border: solid 2px var(--purple);
+    margin: -2px;
+    border-radius: 5px;
 }
 
 /*Gestion du responsive */
@@ -51,20 +68,22 @@
     .quizMode > p {
         font-size: 2rem;
     }
-
     .scr-container {
         display: none;
     }
 }
 
 @media screen and (min-width: 421px) and (max-width: 768px) {
+    .scr-container {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 769px) and (max-width: 1023px) {
+    .scr-container {
+        display: none;
+    }
 }
 
 @media screen and (min-width: 1024px) and (max-width: 1279px) {
-}
-
-@media screen and (min-width: 1280px) {
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import { useState } from 'react'
-import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 
 import './MainContainer.css'
 import './footer/modal.css'
@@ -11,7 +11,7 @@ import Footer from './footer/Footer'
 
 const MainContainer = () => {
     const [score, setScore] = useState(0)
-    const [userName, setUserName] = useState('Player')
+    const [userName, setUserName] = useState('')
     const [quiz, setQuiz] = useState([])
     const [amount, setAmount] = useState(10)
     const [category, setCategory] = useState(9)

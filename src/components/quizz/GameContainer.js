@@ -20,7 +20,7 @@ const GameContainer = ({
     score,
     difficulty,
 }) => {
-    const timerDuration = 10
+    const timerDuration = 20
     const [isAnswersReveal, setIsAnswersReveal] = useState(false)
     const [questionCounter, setQuestionCounter] = useState(1)
     const [randomAnswers, setRandomAnswers] = useState([])
@@ -74,7 +74,7 @@ const GameContainer = ({
     return (
         <div className="game-container">
             <div className="question-info">
-                <div>
+                <div className="counter-container">
                     <QuestionCounter
                         questionCounter={questionCounter}
                         amount={amount}
@@ -89,11 +89,13 @@ const GameContainer = ({
                     />
                 </div>
 
-                <div className="empty"></div>
+                <div className="empty">
+                    {popScore ? (
+                        <div className="pop-score">+ {popValue}</div>
+                    ) : undefined}
+                </div>
             </div>
-            {popScore ? (
-                <div className="pop-score">+ {popValue} !</div>
-            ) : undefined}
+
             <Question question={question} />
 
             <div className="answers-container">
