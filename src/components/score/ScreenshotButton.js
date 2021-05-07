@@ -31,9 +31,9 @@ const ScreenshotButton = ({ image, takeScreenshot }) => {
             {image && (
                 <div className="camera-img">
                     <h2>click below or "save as" to keep your score</h2>
-                    <a onClick={() => debugBase64(image)}>
+                    <div onClick={() => debugBase64(image)}>
                         <img src={image} height={120} alt="screenshot"></img>
-                    </a>
+                    </div>
                 </div>
             )}
         </div>
