@@ -48,10 +48,7 @@ const Ressources = () => {
                             </li>
                         </ul>
                         <div className="flex-center">
-                            <button
-                                className="btn-close"
-                                onClick={() => setDisplay(handleClick)}
-                            >
+                            <button className="btn-close" onClick={handleClick}>
                                 Close
                             </button>
                         </div>
