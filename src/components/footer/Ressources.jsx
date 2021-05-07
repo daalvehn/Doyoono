@@ -43,13 +43,20 @@ const Ressources = () => {
                             </li>
                             <li>
                                 API by Open Trivia
-                                <a href="https://opentdb.com/" target="_blank">
+                                <a
+                                    href="https://opentdb.com/"
+                                    target="_blank"
+                                    rel="noreferrer"
+                                >
                                     opentdb.com
                                 </a>
                             </li>
                         </ul>
                         <div className="flex-center">
-                            <button className="btn-close" onClick={handleClick}>
+                            <button
+                                className="btn-close"
+                                onClick={() => setDisplay(!display)}
+                            >
                                 Close
                             </button>
                         </div>
