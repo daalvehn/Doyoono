@@ -40,11 +40,17 @@ const Ressources = () => {
                                     freepik.com
                                 </a>
                             </li>
+                            <li>
+                                API by Open Trivia
+                                <a href="https://opentdb.com/" target="_blank">
+                                    opentdb.com
+                                </a>
+                            </li>
                         </ul>
                         <div className="flex-center">
                             <button
                                 className="btn-close"
-                                onClick={() => setDisplay(!display)}
+                                onClick={() => setDisplay(handleClick)}
                             >
                                 Close
                             </button>
