@@ -89,9 +89,7 @@ const ScoreContainer = ({
                     difficulty <strong>{difficulty}</strong>
                 </p>
             </div>
-            <div>
-                
-            </div>
+            <div></div>
             <RetryButton
                 setScore={setScore}
                 setAmount={setAmount}
@@ -99,14 +97,15 @@ const ScoreContainer = ({
                 setDifficulty={setDifficulty}
             />
             <div className="btm-score">
-               <ScreenshotButton image={image} takeScreenshot={takeScreenshot} />
-               
-            <div className="scr-history">
-                <ScoreHistory userName={userName} score={score} />
-            </div> 
-            </div>  
-            
-            
+                <ScreenshotButton
+                    image={image}
+                    takeScreenshot={takeScreenshot}
+                />
+
+                <div className="scr-history">
+                    <ScoreHistory userName={userName} score={score} />
+                </div>
+            </div>
         </div>
     )
 }
